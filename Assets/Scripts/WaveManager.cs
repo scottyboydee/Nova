@@ -34,11 +34,9 @@ public class WaveManager : MonoBehaviour
             }
 */
 //            Debug.Log("Spawning Wave: " + wave.wavePrefab.name);
-            Instantiate(wave, Vector3.zero, Quaternion.identity);
             GameObject newWave = wave.gameObject.Clone(waveParent.transform, wave.name, Vector3.zero);
             RectTransform rectTransform = (RectTransform)newWave.transform;
             rectTransform.anchoredPosition = Vector2.zero;
-            //            useShot = newShot.GetComponent<PlayerShot>();
         }
 
     }

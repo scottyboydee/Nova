@@ -4,5 +4,11 @@ using UnityEngine;
 public class Wave : MonoBehaviour
 {
     public GameObject wavePrefab; // Reference to the prefab for this wave
+
+    private void Start()
+    {
+        Debug.Log("Wave spawned: " + gameObject.name);
+
+    }
 }
 
