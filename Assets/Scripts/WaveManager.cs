@@ -25,15 +25,8 @@ public class WaveManager : MonoBehaviour
 
         foreach (Wave wave in waveSet.waves)
         {
-            Debug.Log("Creating Wave: " + wave.name);
-/*
-            if (wave.wavePrefab == null)
-            {
-                Debug.LogError("WavePrefab is NULL");
-                continue;
-            }
-*/
-//            Debug.Log("Spawning Wave: " + wave.wavePrefab.name);
+            Debug.Log("Spawning Wave: " + wave.name);
+
             GameObject newWave = wave.gameObject.Clone(waveParent.transform, wave.name, Vector3.zero);
             RectTransform rectTransform = (RectTransform)newWave.transform;
             rectTransform.anchoredPosition = Vector2.zero;
