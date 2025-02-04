@@ -962,6 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c4114d729d79649a158b650703b1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveParent: {fileID: 1864642009}
   waveSet: {fileID: 11400000, guid: 219a7f994d0c880468cbd5a930ea46ac, type: 2}
 --- !u!114 &1660278499
 MonoBehaviour:
@@ -1165,7 +1166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864642010}
   m_Layer: 0
-  m_Name: Baddies
+  m_Name: Waves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
