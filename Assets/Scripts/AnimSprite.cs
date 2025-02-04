@@ -13,6 +13,11 @@ public class AnimSprite : MonoBehaviour
     private int currentFrame = 0;
     private float timer = 0f;
 
+    private void Reset()
+    {
+        currentFrame = 0;
+    }
+
     void Update()
     {
         if (frames.Length == 0 || targetImage == null)
@@ -30,6 +35,7 @@ public class AnimSprite : MonoBehaviour
 
             if( disableOnFinish && currentFrame < oldFrame )
             {
+                Reset();
                 gameObject.SetActive(false);
                 return;
             }
