@@ -16,6 +16,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField]
     private float xDecel = 0.9f;
 
+    [SerializeField]
     private float xVel;
 
     private void Awake()
