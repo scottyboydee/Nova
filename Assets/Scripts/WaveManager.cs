@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    [SerializeField] private ExplosionManager explosionManager; // Set in Inspector
+    public ExplosionManager ExplosionManager => explosionManager; // Read-only public access
+
     [SerializeField]
     GameObject waveParent;
 
@@ -48,7 +51,7 @@ public class WaveManager : MonoBehaviour
 
         baddies.Add( baddie );
 
-        Debug.Log("AddBaddieToList: number of baddies now: " + baddies.Count );
+//        Debug.Log("AddBaddieToList: number of baddies now: " + baddies.Count );
     }
 
     private void CreateAllWaves()

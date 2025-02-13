@@ -4,33 +4,56 @@ using UnityEngine;
 public class ObjectPool<T> where T : Component
 {
     private readonly T prefab;
+    private readonly Transform parent;
     private readonly Queue<T> pool = new Queue<T>();
 
-    public ObjectPool(T prefab, int initialSize = 10)
+    private int instNum = 0;
+
+    public ObjectPool(T prefab, int initialSize = 10, Transform parent = null)
     {
         this.prefab = prefab;
+        this.parent = parent;
+
         for (int i = 0; i < initialSize; i++)
         {
-            T obj = Object.Instantiate(prefab);
+            T obj = Instantiate();
             obj.gameObject.SetActive(false);
             pool.Enqueue(obj);
         }
     }
 
-    public T Get()
+    public T Get(bool active = true)
     {
+        T obj;
         if (pool.Count > 0)
         {
-            T obj = pool.Dequeue();
-            obj.gameObject.SetActive(true);
-            return obj;
+            obj = pool.Dequeue();
         }
-        return Object.Instantiate(prefab);
+        else
+        {
+            Debug.Log("EEK: " + prefab.name + " POOL RAN OUT, INSTANTIATING!");
+            obj = Instantiate();
+        }
+
+        obj.gameObject.SetActive(active);
+
+        Debug.Log("Objects left in " + prefab.name + " pool: " + pool.Count);
+        return obj;
+    }
+
+    private T Instantiate()
+    {
+        T obj;
+        obj = Object.Instantiate(prefab, parent);
+        obj.gameObject.name += "(" + (instNum++) + ")";
+
+        return obj;
     }
 
     public void ReturnToPool(T obj)
     {
         obj.gameObject.SetActive(false);
+        obj.transform.SetParent(parent); // Ensure it stays under the parent
         pool.Enqueue(obj);
     }
 }

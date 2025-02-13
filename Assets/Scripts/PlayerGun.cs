@@ -59,7 +59,7 @@ public class PlayerGun : MonoBehaviour
             useShot = newShot.GetComponent<PlayerShot>();
             shots[useShotNum] = useShot;
 
-            Debug.Log("Created new shot, now have " + useShotNum + "/" + MAX_SHOTS);
+//            Debug.Log("Created new shot, now have " + useShotNum + "/" + MAX_SHOTS);
         }
 
         useShot.gameObject.SetActive(true);
