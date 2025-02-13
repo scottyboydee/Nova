@@ -11,18 +11,33 @@ public class CollisionHandler : MonoBehaviour
     {
         Debug.Log("Collision! " + other.gameObject.name + " entered " + gameObject.name);
 
-        IExplode explosive = gameObject.GetComponent<IExplode>();
-        if (explosive != null)
+        if( gameObject.layer == LayerNames.PlayerShot)
         {
-            explosive.Explode();
+            Debug.Log("I'm a PlayerShot! We must have hit a baddie!");
+            Baddie baddie = other.gameObject.GetComponent<Baddie>();
+            if( baddie == null )
+            {
+                Debug.Log("EEK! CollisionHandler: PlayerShot didn't find baddie!");
+                return;
+            }
+
+            Debug.Log("PlayerShot found a baddie to kill!");
         }
 
-        // HACK! TOTAL AND UTTER HACK!!
-        explosive = other.gameObject.transform.parent.parent.gameObject.GetComponent<IExplode>();
-        if (explosive != null)
-        {
-            explosive.Explode();
-        }
+        /*
+            IExplode explosive = gameObject.GetComponent<IExplode>();
+            if (explosive != null)
+            {
+                explosive.Explode();
+            }
+
+            // HACK! TOTAL AND UTTER HACK!!
+            explosive = other.gameObject.transform.parent.parent.gameObject.GetComponent<IExplode>();
+            if (explosive != null)
+            {
+                explosive.Explode();
+            }
+        */
     }
 }
 
