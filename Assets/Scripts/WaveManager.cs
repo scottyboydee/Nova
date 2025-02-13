@@ -15,6 +15,8 @@ public class WaveManager : MonoBehaviour
 
     private List<Baddie> baddies;
 
+    private int nextWaveNum = 0;
+
     public static WaveManager Instance { get; private set; }
 
     private void Awake()
@@ -30,7 +32,9 @@ public class WaveManager : MonoBehaviour
 
     void Start()
     {
-        CreateAllWaves();
+        NextWave();
+
+//        CreateAllWaves();
 
         baddies = new List<Baddie>();
     }
@@ -96,6 +100,30 @@ public class WaveManager : MonoBehaviour
 
         baddies.Remove(baddie);
 
+        if (baddies.Count > 0)
+            return;
+
+        Debug.Log("WaveManager: Wave complete, moving to next.");
+        NextWave();
+
 //        Debug.Log("RemoveBaddieFromList: number of baddies now: " + baddies.Count);
     }
+
+    private void NextWave()
+    {
+        Debug.Log("NextWave: " + nextWaveNum);
+
+        if( nextWaveNum >= waveSet.waves.Length )
+        {
+            Debug.Log("ALL WAVES COMPLETED! GAME OVER! BUT IN THE GOOD WAY!");
+            return;
+        }
+
+        Debug.Log("Spawning Wave num: " + nextWaveNum);
+        SpawnWave(waveSet.waves[nextWaveNum]);
+
+        nextWaveNum++;
+    }
+
+
 }
