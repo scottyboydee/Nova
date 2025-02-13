@@ -96,6 +96,6 @@ public class WaveManager : MonoBehaviour
 
         baddies.Remove(baddie);
 
-        Debug.Log("RemoveBaddieFromList: number of baddies now: " + baddies.Count);
+//        Debug.Log("RemoveBaddieFromList: number of baddies now: " + baddies.Count);
     }
 }

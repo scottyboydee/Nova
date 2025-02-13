@@ -21,7 +21,7 @@ public class ExplosionManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("AddExplosion from: " + anchor.name);
+//        Debug.Log("AddExplosion from: " + anchor.name);
 
         Explosion newExplosion = explosionPool.Get();
         newExplosion.SetManager(this);
@@ -30,7 +30,7 @@ public class ExplosionManager : MonoBehaviour
 
     public void ExplosionFinished(Explosion explosion)
     {
-        Debug.Log("Returning to pool: "+ explosion.name);
+//        Debug.Log("Returning to pool: "+ explosion.name);
         explosionPool.ReturnToPool(explosion);
     }
 

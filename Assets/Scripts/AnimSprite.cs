@@ -54,12 +54,12 @@ public class AnimSprite : MonoBehaviour
                 Reset();
                 if (notifyTarget != null)
                 {
-                    Debug.Log("Notifying Target");
+//                    Debug.Log("Notifying Target");
                     notifyTarget.Notify(NotifyType.AnimFinished);
                 }
                 else
                 {
-                    Debug.Log("No target to notify");
+//                    Debug.Log("No target to notify");
                 }
                 gameObject.SetActive(false);
                 return;

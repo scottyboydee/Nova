@@ -21,7 +21,7 @@ public class Explosion : MonoBehaviour, INotify
             return;
         }
 
-        Debug.Log("Anim finished!");
+ //       Debug.Log("Anim finished!");
         ReturnToPool();
     }
 
@@ -29,7 +29,7 @@ public class Explosion : MonoBehaviour, INotify
     {
         if( manager != null ) 
         {
-            Debug.Log("Explosion:ReturnToPool");
+//            Debug.Log("Explosion:ReturnToPool");
             manager.ExplosionFinished(this);
         }
         else

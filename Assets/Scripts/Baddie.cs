@@ -24,7 +24,7 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
 
     private void Die()
     {
-        Debug.Log("Baddie Die: " + gameObject.name);
+//        Debug.Log("Baddie Die: " + gameObject.name);
         WaveManager.Instance.RemoveBaddieFromList(this);
         Destroy(gameObject);
     }

@@ -37,7 +37,7 @@ public class ObjectPool<T> where T : Component
 
         obj.gameObject.SetActive(active);
 
-        Debug.Log("Objects left in " + prefab.name + " pool: " + pool.Count);
+ //       Debug.Log("Objects left in " + prefab.name + " pool: " + pool.Count);
         return obj;
     }
 
@@ -55,5 +55,7 @@ public class ObjectPool<T> where T : Component
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(parent); // Ensure it stays under the parent
         pool.Enqueue(obj);
+
+ //       Debug.Log("Object returned to " + prefab.name + " pool. Now have: " + pool.Count);
     }
 }
