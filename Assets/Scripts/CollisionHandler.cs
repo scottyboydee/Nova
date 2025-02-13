@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class CollisionHandler : MonoBehaviour
 {
     void Awake()
@@ -13,15 +12,16 @@ public class CollisionHandler : MonoBehaviour
 
         if( gameObject.layer == LayerNames.PlayerShot)
         {
-            Debug.Log("I'm a PlayerShot! We must have hit a baddie!");
-            Baddie baddie = other.gameObject.GetComponent<Baddie>();
-            if( baddie == null )
+//            Debug.Log("I'm a PlayerShot! We must have hit a baddie!");
+            ICollide collideRecipient = other.transform.parent.GetComponent<ICollide>();
+            if(collideRecipient == null )
             {
-                Debug.Log("EEK! CollisionHandler: PlayerShot didn't find baddie!");
+                Debug.Log("EEK! CollisionHandler: PlayerShot didn't find collideRecipient!");
                 return;
             }
 
-            Debug.Log("PlayerShot found a baddie to kill!");
+//            Debug.Log("PlayerShot found a collideRecipient to inform!");
+            collideRecipient.Collide();
         }
 
         /*

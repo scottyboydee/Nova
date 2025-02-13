@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -74,5 +75,24 @@ public class WaveManager : MonoBehaviour
         GameObject newWave = wave.gameObject.Clone(waveParent.transform, wave.name, Vector3.zero);
         RectTransform rectTransform = (RectTransform)newWave.transform;
         rectTransform.anchoredPosition = Vector2.zero;
+    }
+
+    internal void RemoveBaddieFromList(Baddie baddie)
+    {
+        if (baddies == null)
+        {
+            Debug.Log("EEK! RemoveBaddieFromList: Baddies list is null!");
+            return;
+        }
+
+        if (baddie == null)
+        {
+            Debug.Log("EEK! RemoveBaddieFromList: baddie was null!");
+            return;
+        }
+
+        baddies.Remove(baddie);
+
+        Debug.Log("RemoveBaddieFromList: number of baddies now: " + baddies.Count);
     }
 }
