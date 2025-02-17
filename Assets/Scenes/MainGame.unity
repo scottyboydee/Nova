@@ -1011,6 +1011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionManager: {fileID: 1660278501}
   waveParent: {fileID: 1864642009}
+  pauseBetweenWaves: 2
   waveSet: {fileID: 11400000, guid: 219a7f994d0c880468cbd5a930ea46ac, type: 2}
 --- !u!114 &1660278499
 MonoBehaviour:

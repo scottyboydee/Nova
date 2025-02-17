@@ -1,0 +1,16 @@
+NOVA tasks
+
+* want to be able to kill aliens
+  - so the hit detection must tell them to die
+  - which should trigger their explosion (and later explosion GROUP)
+  * Perhaps explosions should have a time delay parameter so clusters can be made all at once
+  - active aliens should add themselves into a list in the wave manager
+  - when they die, they should remove themselves from the list
+  - debug output the number as they add themselves
+  - debug output the number as they are killed
+
+  * SPAWNING
+    - must spawn just the 1st wave of aliens for now
+    - when it's depleted to zero, spawn the next list
+      - perhaps a short timer between waves? but the delay in the wavemanager
+    - when we're out of waves, for now just debug GAME FINISHED or similar

@@ -10,12 +10,17 @@ public class WaveManager : MonoBehaviour
     [SerializeField]
     GameObject waveParent;
 
+    [SerializeField]
+    private float pauseBetweenWaves;
+
     [SerializeField] 
     private SO_WaveSet waveSet;
 
     private List<Baddie> baddies;
 
     private int nextWaveNum = 0;
+
+    private float nextWavePauseRemaining = 0;
 
     public static WaveManager Instance { get; private set; }
 
@@ -104,9 +109,16 @@ public class WaveManager : MonoBehaviour
             return;
 
         Debug.Log("WaveManager: Wave complete, moving to next.");
-        NextWave();
+        StartPauseBeforeNextWave();
+
 
 //        Debug.Log("RemoveBaddieFromList: number of baddies now: " + baddies.Count);
+    }
+
+    private void StartPauseBeforeNextWave()
+    {
+        Debug.Log("StartPauseBeforeNextWave: setting to: " + pauseBetweenWaves);
+        nextWavePauseRemaining = pauseBetweenWaves;
     }
 
     private void NextWave()
@@ -123,6 +135,22 @@ public class WaveManager : MonoBehaviour
         SpawnWave(waveSet.waves[nextWaveNum]);
 
         nextWaveNum++;
+    }
+
+    private void Update()
+    {
+        if( nextWavePauseRemaining > 0 )
+        {
+            Debug.Log("Next Wave timer remain: " + nextWavePauseRemaining);
+            nextWavePauseRemaining -= Time.deltaTime;
+
+            if( nextWavePauseRemaining < 0 )
+            {
+                Debug.Log("Next Wave timer depleted! Spawning!");
+                nextWavePauseRemaining = 0;
+                NextWave();
+            }
+        }
     }
 
 
