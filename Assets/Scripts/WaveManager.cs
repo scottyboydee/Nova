@@ -16,11 +16,16 @@ public class WaveManager : MonoBehaviour
     [SerializeField] 
     private SO_WaveSet waveSet;
 
+    [SerializeField]
+    private Wave[] waveBuilder;
+
     private List<Baddie> baddies;
 
     private int nextWaveNum = 0;
 
     private float nextWavePauseRemaining = 0;
+
+
 
     public static WaveManager Instance { get; private set; }
 
@@ -73,7 +78,7 @@ public class WaveManager : MonoBehaviour
             return;
         }
 
-        foreach (Wave wave in waveSet.waves)
+        foreach (Wave wave in waveBuilder)
         {
             SpawnWave( wave );
         }
@@ -125,14 +130,14 @@ public class WaveManager : MonoBehaviour
     {
         Debug.Log("NextWave: " + nextWaveNum);
 
-        if( nextWaveNum >= waveSet.waves.Length )
+        if( nextWaveNum >= waveBuilder.Length )
         {
             Debug.Log("ALL WAVES COMPLETED! GAME OVER! BUT IN THE GOOD WAY!");
             return;
         }
 
         Debug.Log("Spawning Wave num: " + nextWaveNum);
-        SpawnWave(waveSet.waves[nextWaveNum]);
+        SpawnWave(waveBuilder[nextWaveNum]);
 
         nextWaveNum++;
     }

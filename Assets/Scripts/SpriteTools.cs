@@ -2,10 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum LeftRight
+{
+    Left,
+    Right
+}
+
+public enum Direction
+{
+    None,
+    Up,
+    Down,
+    Left,
+    Right
+}
+
 public class SpriteTools : MonoBehaviour
 {
     [SerializeField]
     private Canvas canvas;
+
+    public Canvas Canvas { get { return canvas; } }
 
     public static SpriteTools Inst { get; private set; }
 
@@ -32,6 +49,21 @@ public class SpriteTools : MonoBehaviour
     {
         
     }
+
+    public float GetMax( Direction direction, Rect rect)
+    {
+        float max = 0;
+
+        switch( direction) 
+        {
+            case Direction.Left:
+                break;
+        }
+
+        return max;
+    }
+
+    // TODO: cleanup this GPT filth
     public Enclose CheckEnclosure(RectTransform rect)
     {
         RectTransform canvasRect = canvas.GetComponent<RectTransform>();
@@ -79,5 +111,13 @@ public class SpriteTools : MonoBehaviour
         {
             return Enclose.Outside;
         }
+    }
+}
+
+public static class RectExtensions
+{
+    public static Rect PadRectBySpriteRect(this Rect bounds, Rect spriteRect)
+    {
+        return new Rect(bounds.xMin + spriteRect.width/2, bounds.yMin + spriteRect.height/2, bounds.width - spriteRect.width, bounds.height - spriteRect.height);
     }
 }

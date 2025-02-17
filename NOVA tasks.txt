@@ -14,3 +14,15 @@ NOVA tasks
     - when it's depleted to zero, spawn the next list
       - perhaps a short timer between waves? but the delay in the wavemanager
     - when we're out of waves, for now just debug GAME FINISHED or similar
+
+WAVES actually doing things:
+
+- create a movement script for the 1st wave
+  - start moving in a direction (set by an editor parameter)
+  - according to direction, also check for screen side collision
+  - first move down (will need to calc our descend-to height)
+  - then move back up (will need to store our origin height)
+
+
+  * occasionally emit shots
+    * will need a baddy shot pool
