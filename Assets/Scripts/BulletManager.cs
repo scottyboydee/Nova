@@ -6,14 +6,14 @@ using UnityEngine;
 public class BulletManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject baddieBulletPrefab;
+    private PlayerShot baddieBulletPrefab;
 
     [SerializeField]
     private GameObject bulletsParent;
 
-//    private ObjectPool<Explosion> baddieBulletPool;
+    private ObjectPool<PlayerShot> baddieBulletPool;
 
-    internal void AddItem(GameObject anchor)
+    internal void AddBaddieShot(GameObject anchor)
     {
         if (anchor == null)
         {
@@ -21,16 +21,16 @@ public class BulletManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("AddItem from: " + anchor.name);
+        Debug.Log("AddBaddieShot from: " + anchor.name);
 
-//        Transform newItem = baddieBulletPool.Get();
-     //   newItem.position = anchor.transform.position;
+        PlayerShot newItem = baddieBulletPool.Get();
+        newItem.transform.position = anchor.transform.position;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-//        baddieBulletPool = new ObjectPool<Transform>(baddieBulletPrefab.transform, 20, bulletsParent.transform);
+        baddieBulletPool = new ObjectPool<PlayerShot>(baddieBulletPrefab, 20, bulletsParent.transform);
     }
 
 

@@ -1,13 +1,12 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using UnityEngine.Pool;
 using UnityEngine;
 
-public class ObjectPool<T> where T : MonoBehaviour
+public class ObjectPool<T> : IPoolReturnable where T : MonoBehaviour
 {
+    private readonly Queue<T> pool = new Queue<T>();
     private readonly T prefab;
     private readonly Transform parent;
-    private readonly Queue<T> pool = new Queue<T>();
-
     private int instNum = 0;
 
     public ObjectPool(T prefab, int initialSize = 10, Transform parent = null)
@@ -37,8 +36,6 @@ public class ObjectPool<T> where T : MonoBehaviour
         }
 
         obj.gameObject.SetActive(active);
-
-        Debug.Log("Objects left in " + prefab.name + " pool: " + pool.Count);
         return obj;
     }
 
@@ -47,8 +44,8 @@ public class ObjectPool<T> where T : MonoBehaviour
         T obj = Object.Instantiate(prefab, parent);
         obj.gameObject.name += "(" + (instNum++) + ")";
 
-        PooledObject pooled = obj.gameObject.AddComponent<PooledObject>();
-        pooled.SetPool(this); // Pass the pool to the non-generic component
+        PooledObject pooled = obj.gameObject.GetComponent<PooledObject>() ?? obj.gameObject.AddComponent<PooledObject>();
+        pooled.SetPool(this, obj); // Pass the pool as an IObjectPool
 
         return obj;
     }
@@ -56,10 +53,13 @@ public class ObjectPool<T> where T : MonoBehaviour
     public void ReturnToPool(T obj)
     {
         obj.gameObject.SetActive(false);
-        obj.transform.SetParent(parent); // Ensure it stays under the parent
+        obj.transform.SetParent(parent);
         pool.Enqueue(obj);
-
-        Debug.Log("Object returned to " + prefab.name + " pool. Now have: " + pool.Count);
     }
 
+    void IPoolReturnable.ReturnToPool(Object obj)
+    {
+        T casted = obj as T;
+        ReturnToPool(casted);
+    }
 }

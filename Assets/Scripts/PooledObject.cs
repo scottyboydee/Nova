@@ -1,19 +1,20 @@
+using UnityEngine.Pool;
 using UnityEngine;
 
 public class PooledObject : MonoBehaviour
 {
-    private object pool; // Store as object to handle any ObjectPool<T>
+    private IPoolReturnable pool; // Store as non-generic interface
 
-    public void SetPool<T>(ObjectPool<T> pool) where T : MonoBehaviour
+    private Object pooledObject;
+
+    public void SetPool(IPoolReturnable pool, Object obj)
     {
         this.pool = pool;
+        pooledObject = obj;
     }
 
     public void ReturnToPool()
     {
-        if (pool is ObjectPool<MonoBehaviour> monoPool)
-        {
-            monoPool.ReturnToPool(this);
-        }
+        pool?.ReturnToPool(pooledObject);
     }
 }

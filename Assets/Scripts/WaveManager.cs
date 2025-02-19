@@ -7,6 +7,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private ExplosionManager explosionManager; // Set in Inspector
     public ExplosionManager ExplosionManager => explosionManager; // Read-only public access
 
+    [SerializeField] private BulletManager bulletManager; // Set in Inspector
+    public BulletManager BulletManager => bulletManager; // Read-only public access
+
     [SerializeField]
     GameObject waveParent;
 

@@ -10,6 +10,8 @@ public class PlayerShot : MonoBehaviour
     [SerializeField]
     private RectTransform rectTransform;
 
+    private PooledObject pooledObject;
+
     public void Fire( Vector3 fromPos )
     {
         transform.position = fromPos;
@@ -18,7 +20,7 @@ public class PlayerShot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pooledObject = GetComponent<PooledObject>();
     }
 
     // Update is called once per frame
@@ -41,6 +43,12 @@ public class PlayerShot : MonoBehaviour
 
     private void Deactivate()
     {
+        if(pooledObject != null)
+        {
+            pooledObject.ReturnToPool();
+            return;
+        }
+
         gameObject.SetActive(false);
     }
 }

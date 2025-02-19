@@ -1358,6 +1358,25 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 960380445}
   m_SourcePrefab: {fileID: 100100000, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+--- !u!1 &1121868067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1410420798459024013, guid: 17c4582408040694b9bf20f8c4f2d99a, type: 3}
+  m_PrefabInstance: {fileID: 4970515514592714177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1121868073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121868067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26f689ea7aca4a4db861b5c4e13435e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 1
+  Probability: 0.5
 --- !u!1001 &1147026866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,6 +1513,42 @@ MonoBehaviour:
   startDirection: 0
   speed: 100
   yMove: 48
+--- !u!1 &1245419572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245419573}
+  m_Layer: 0
+  m_Name: Bullets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1245419573
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245419572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1359692245}
+  m_Father: {fileID: 2038051638}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1293855060 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -1637,7 +1692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1359692245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1645,13 +1700,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359692244}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2122395376}
-  m_Father: {fileID: 2038051638}
+  m_Father: {fileID: 1245419573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2040,6 +2095,7 @@ GameObject:
   - component: {fileID: 1660278499}
   - component: {fileID: 1660278498}
   - component: {fileID: 1660278501}
+  - component: {fileID: 1660278502}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2060,6 +2116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionManager: {fileID: 1660278501}
+  bulletManager: {fileID: 1660278502}
   waveParent: {fileID: 1864642009}
   pauseBetweenWaves: 2
   waveSet: {fileID: 11400000, guid: 219a7f994d0c880468cbd5a930ea46ac, type: 2}
@@ -2108,6 +2165,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: -4062671740911376744, guid: d3b57821e33964748af9948c179a2c5a, type: 3}
   explosionParent: {fileID: 90994657}
+--- !u!114 &1660278502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660278497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a42865431710d479fff4cafa07fa26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baddieBulletPrefab: {fileID: 1359692248}
+  bulletsParent: {fileID: 1245419572}
 --- !u!1001 &1700317958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2636,10 +2707,10 @@ RectTransform:
   m_Children:
   - {fileID: 804510320}
   - {fileID: 1806628330}
+  - {fileID: 1245419573}
   - {fileID: 1864642010}
   - {fileID: 459164829}
   - {fileID: 1381516550}
-  - {fileID: 1359692245}
   - {fileID: 90994658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3425,7 +3496,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6418239432645855220, guid: 17c4582408040694b9bf20f8c4f2d99a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1201676316}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1410420798459024013, guid: 17c4582408040694b9bf20f8c4f2d99a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1121868073}
   m_SourcePrefab: {fileID: 100100000, guid: 17c4582408040694b9bf20f8c4f2d99a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
