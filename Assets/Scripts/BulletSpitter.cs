@@ -40,14 +40,14 @@ public class BulletSpitter : MonoBehaviour
             }
             else
             {
-                Debug.Log("Not firing, due to random " + random + " > probability: " + Probability);
+//                Debug.Log("Not firing, due to random " + random + " > probability: " + Probability);
             }
         }
     }
 
     private void Fire()
     {
-        Debug.Log("FIRE!");
+//        Debug.Log("FIRE!");
         WaveManager.Instance.BulletManager.AddBaddieShot(gameObject);
     }
 }

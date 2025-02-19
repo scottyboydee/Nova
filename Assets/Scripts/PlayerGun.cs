@@ -9,6 +9,9 @@ public class PlayerGun : MonoBehaviour
     [SerializeField]
     GameObject sourceShot;
 
+    [SerializeField]
+    GameObject playerShotsParent;
+
     static readonly int MAX_SHOTS = 10;
 
     PlayerShot[] shots = new PlayerShot[MAX_SHOTS];
@@ -55,7 +58,7 @@ public class PlayerGun : MonoBehaviour
 
         if (useShot == null)
         { 
-            GameObject newShot = sourceShot.Clone(sourceShot.transform.parent, sourceShot.gameObject.name + "_" + useShotNum);
+            GameObject newShot = sourceShot.Clone(playerShotsParent.transform, sourceShot.gameObject.name + "_" + useShotNum);
             useShot = newShot.GetComponent<PlayerShot>();
             shots[useShotNum] = useShot;
 
