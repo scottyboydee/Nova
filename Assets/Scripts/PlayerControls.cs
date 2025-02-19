@@ -99,4 +99,9 @@ public class PlayerControls : MonoBehaviour
             xVel = 0;
         }
     }
+
+    public void Reset()
+    {
+        xVel = 0;
+    }
 }

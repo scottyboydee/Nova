@@ -33,5 +33,11 @@ public class BulletManager : MonoBehaviour
         baddieBulletPool = new ObjectPool<PlayerShot>(baddieBulletPrefab, 20, bulletsParent.transform);
     }
 
+    public void CleanUpAllBullets()
+    {
+        Debug.Log("CleanUpAllBullets");
+        baddieBulletPool.ReturnAllToPool();
+    }
+
 
 }

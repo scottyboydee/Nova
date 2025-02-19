@@ -35,7 +35,7 @@ public class CollisionHandler : MonoBehaviour
                 return;
             }
 
-            Debug.Log("BaddieShot found a collideRecipient to inform!");
+//            Debug.Log("BaddieShot found a collideRecipient to inform!");
             collideRecipient.Collide();
 
         }

@@ -1104,6 +1104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 459164834}
   GunPos: {fileID: 596003689}
+  controls: {fileID: 459164833}
 --- !u!114 &459164831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4345,6 +4346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc5c06c06d5034498e284cdfe74bdc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseAfterPlayerDeath: 2
+  thePlayer: {fileID: 459164830}
 --- !u!4 &1660278500
 Transform:
   m_ObjectHideFlags: 0

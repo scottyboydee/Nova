@@ -9,6 +9,8 @@ public class ObjectPool<T> : IPoolReturnable where T : MonoBehaviour
     private readonly Transform parent;
     private int instNum = 0;
 
+    private readonly List<T> inUse = new List<T>();
+
     public ObjectPool(T prefab, int initialSize = 10, Transform parent = null)
     {
         this.prefab = prefab;
@@ -28,6 +30,7 @@ public class ObjectPool<T> : IPoolReturnable where T : MonoBehaviour
         if (pool.Count > 0)
         {
             obj = pool.Dequeue();
+            inUse.Add(obj);
         }
         else
         {
@@ -55,6 +58,17 @@ public class ObjectPool<T> : IPoolReturnable where T : MonoBehaviour
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(parent);
         pool.Enqueue(obj);
+        inUse.Remove(obj);
+    }
+
+    public void ReturnAllToPool()
+    {
+        Debug.Log("ReturnAllToPool");
+        while(inUse.Count > 0)
+        {
+            ReturnToPool(inUse[0]);
+            Debug.Log("Now have inUse: " + inUse.Count);
+        }
     }
 
     void IPoolReturnable.ReturnToPool(Object obj)

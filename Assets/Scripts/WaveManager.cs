@@ -27,8 +27,6 @@ public class WaveManager : MonoBehaviour
     private int nextWaveNum = 0;
 
     private float nextWavePauseRemaining = 0;
-    private float playerDeadPauseRemaining = 0;
-
 
 
     public static WaveManager Instance { get; private set; }
@@ -163,12 +161,25 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    public void RestartCurrentWave()
+    {
+        Debug.Log("RestartCurrentWave: ");
+
+        nextWaveNum--;
+
+        CleanUpAllWaves();
+
+        NextWave();
+    }
+
     private void CleanUpAllWaves()
     {
         foreach (Transform child in waveParent.transform)
         {
             GameObject.Destroy(child.gameObject);
         }
+
+        baddies.Clear();
     }
 
 

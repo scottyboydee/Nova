@@ -10,6 +10,9 @@ public class Player : MonoBehaviour, ICollide
     [SerializeField]
     private Transform GunPos;
 
+    [SerializeField]
+    private PlayerControls controls;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +41,16 @@ public class Player : MonoBehaviour, ICollide
 
     public void Collide()
     {
+        Die();
+    }
+
+    private void Die()
+    {
         Debug.Log("Player here - I DIED!");
+
+        GameManager.Instance.PlayerDied();
+
+        controls.Reset();
     }
 }
 
