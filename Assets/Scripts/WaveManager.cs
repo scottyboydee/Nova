@@ -27,6 +27,7 @@ public class WaveManager : MonoBehaviour
     private int nextWaveNum = 0;
 
     private float nextWavePauseRemaining = 0;
+    private float playerDeadPauseRemaining = 0;
 
 
 
@@ -147,6 +148,7 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
+        
         if( nextWavePauseRemaining > 0 )
         {
             Debug.Log("Next Wave timer remain: " + nextWavePauseRemaining);
@@ -158,6 +160,14 @@ public class WaveManager : MonoBehaviour
                 nextWavePauseRemaining = 0;
                 NextWave();
             }
+        }
+    }
+
+    private void CleanUpAllWaves()
+    {
+        foreach (Transform child in waveParent.transform)
+        {
+            GameObject.Destroy(child.gameObject);
         }
     }
 

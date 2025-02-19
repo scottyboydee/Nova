@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, ICollide
 {
     [SerializeField]
     public PlayerGun gun;
@@ -34,6 +34,11 @@ public class Player : MonoBehaviour
     public void Fire()
     {
         gun.Fire( GunPos.position );
+    }
+
+    public void Collide()
+    {
+        Debug.Log("Player here - I DIED!");
     }
 }
 

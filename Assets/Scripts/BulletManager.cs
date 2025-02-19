@@ -21,7 +21,7 @@ public class BulletManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("AddBaddieShot from: " + anchor.name);
+//        Debug.Log("AddBaddieShot from: " + anchor.name);
 
         PlayerShot newItem = baddieBulletPool.Get();
         newItem.transform.position = anchor.transform.position;

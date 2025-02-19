@@ -24,20 +24,22 @@ public class CollisionHandler : MonoBehaviour
             collideRecipient.Collide();
         }
 
-        /*
-            IExplode explosive = gameObject.GetComponent<IExplode>();
-            if (explosive != null)
+        if (gameObject.layer == LayerNames.BaddieShot)
+        {
+            Debug.Log("I'm a BaddieShot! We must have hit the player!");
+
+            ICollide collideRecipient = other.transform.parent.GetComponent<ICollide>();
+            if (collideRecipient == null)
             {
-                explosive.Explode();
+                Debug.Log("EEK! CollisionHandler: BaddieShot didn't find collideRecipient!");
+                return;
             }
 
-            // HACK! TOTAL AND UTTER HACK!!
-            explosive = other.gameObject.transform.parent.parent.gameObject.GetComponent<IExplode>();
-            if (explosive != null)
-            {
-                explosive.Explode();
-            }
-        */
+            Debug.Log("BaddieShot found a collideRecipient to inform!");
+            collideRecipient.Collide();
+
+        }
+
     }
 }
 
