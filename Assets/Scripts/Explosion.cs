@@ -14,9 +14,9 @@ public class Explosion : MonoBehaviour, INotify
         this.manager = manager;
     }
 
-    public void Notify(NotifyType notification)
+    public void Notify(NotifyType notification, GameObject context = null)
     {
-        if( notification != NotifyType.AnimFinished )
+        if ( notification != NotifyType.AnimFinished )
         {
             return;
         }
@@ -49,4 +49,5 @@ public class Explosion : MonoBehaviour, INotify
     {
         
     }
+
 }

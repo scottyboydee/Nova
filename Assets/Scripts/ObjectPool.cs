@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class ObjectPool<T> where T : Component
+public class ObjectPool<T> where T : MonoBehaviour
 {
     private readonly T prefab;
     private readonly Transform parent;
@@ -37,15 +38,17 @@ public class ObjectPool<T> where T : Component
 
         obj.gameObject.SetActive(active);
 
- //       Debug.Log("Objects left in " + prefab.name + " pool: " + pool.Count);
+        Debug.Log("Objects left in " + prefab.name + " pool: " + pool.Count);
         return obj;
     }
 
     private T Instantiate()
     {
-        T obj;
-        obj = Object.Instantiate(prefab, parent);
+        T obj = Object.Instantiate(prefab, parent);
         obj.gameObject.name += "(" + (instNum++) + ")";
+
+        PooledObject<T> pooled = obj.gameObject.AddComponent<PooledObject<T>>();
+        pooled.SetPool(this);
 
         return obj;
     }
@@ -56,6 +59,7 @@ public class ObjectPool<T> where T : Component
         obj.transform.SetParent(parent); // Ensure it stays under the parent
         pool.Enqueue(obj);
 
- //       Debug.Log("Object returned to " + prefab.name + " pool. Now have: " + pool.Count);
+        Debug.Log("Object returned to " + prefab.name + " pool. Now have: " + pool.Count);
     }
+
 }
