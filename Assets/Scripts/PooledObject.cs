@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class PooledObject<T> : MonoBehaviour where T : MonoBehaviour
+public class PooledObject : MonoBehaviour
 {
-    private ObjectPool<T> pool;
+    private object pool; // Store as object to handle any ObjectPool<T>
 
-    public void SetPool(ObjectPool<T> pool)
+    public void SetPool<T>(ObjectPool<T> pool) where T : MonoBehaviour
     {
         this.pool = pool;
     }
 
     public void ReturnToPool()
     {
-        pool?.ReturnToPool(this as T);
+        if (pool is ObjectPool<MonoBehaviour> monoPool)
+        {
+            monoPool.ReturnToPool(this);
+        }
     }
 }

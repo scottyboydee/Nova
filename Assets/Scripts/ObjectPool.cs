@@ -47,8 +47,8 @@ public class ObjectPool<T> where T : MonoBehaviour
         T obj = Object.Instantiate(prefab, parent);
         obj.gameObject.name += "(" + (instNum++) + ")";
 
-        PooledObject<T> pooled = obj.gameObject.AddComponent<PooledObject<T>>();
-        pooled.SetPool(this);
+        PooledObject pooled = obj.gameObject.AddComponent<PooledObject>();
+        pooled.SetPool(this); // Pass the pool to the non-generic component
 
         return obj;
     }
