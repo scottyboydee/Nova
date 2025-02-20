@@ -11,6 +11,7 @@ public class LifeCycleManager : MonoBehaviour
         MainGame,
         Highscores
     }
+    public static LifeCycleManager Instance { get; private set; }
 
     private State state;
 
@@ -23,6 +24,11 @@ public class LifeCycleManager : MonoBehaviour
 
     [SerializeField]
     private FadeController fadeController;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -78,7 +84,11 @@ public class LifeCycleManager : MonoBehaviour
 
     private void StateHighscores()
     {
+        Debug.Log("LifeCycleManager: StateHighscores");
 
+        // Unload MainGame scene and load Highscores
+        SceneManager.UnloadSceneAsync(mainGameScene);
+        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
     }
 
     public void LoadSplash()
@@ -93,15 +103,6 @@ public class LifeCycleManager : MonoBehaviour
         Debug.Log("LifeCycleManager: LoadGame");
         // Load the game scene and optionally disable the splash screen
         SceneManager.LoadScene(mainGameScene, LoadSceneMode.Additive);
-    }
-
-    public void EndGame()
-    {
-        Debug.Log("LifeCycleManager: EndGame");
-
-        // Unload MainGame scene and load Highscores
-        SceneManager.UnloadSceneAsync(mainGameScene);
-        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
     }
 
     public void RestartGame()
@@ -124,6 +125,9 @@ public class LifeCycleManager : MonoBehaviour
         {
             case State.Splash:
                 SetState(State.MainGame);
+                break;
+            case State.Highscores:
+                SetState(State.Splash);
                 break;
             default:
  //               Debug.Log("LifeCycleManager: Nothing to do with this input!");

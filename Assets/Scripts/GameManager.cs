@@ -38,6 +38,13 @@ public class GameManager : MonoBehaviour
         if(stillAlive == false)
         {
             Debug.Log("PLAYER COMPLETELY OUT OF LIVES!!");
+            if(LifeCycleManager.Instance != null ) 
+            {
+                LifeCycleManager.Instance.SetState(LifeCycleManager.State.Highscores);
+                return;
+            }
+
+            Debug.Log("But we're in testing mode, so I guess we'll keep going!");
             return;
         }
 
