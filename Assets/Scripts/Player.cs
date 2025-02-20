@@ -50,6 +50,8 @@ public class Player : MonoBehaviour, ICollide
 
         GameManager.Instance.PlayerDied();
 
+        WaveManager.Instance.ExplosionManager.AddExplosion(gameObject);
+
         controls.Reset();
     }
 }

@@ -3,6 +3,9 @@ NOVA tasks
 
 PLAYER DEATH
 * need a SPECIAL bigger explosion for the player
+  ! the original uses a big central explosion and three small ones, on the nose and wings
+
+* Scene management
 
 
 Lives manager
@@ -16,12 +19,12 @@ Lives manager
 
 
 * On death:
-  * spawn explosion
-  * need to hide the player
-  * can't shoot when dead :)
-  * need a timer for when the player's killed (for now, use the same max value as between waves)
-  * clean up the old wave
-  * decrease number of lives
+  - spawn explosion
+  - need to hide the player
+  - can't shoot when dead :)
+  - need a timer for when the player's killed (for now, use the same max value as between waves)
+  - clean up the old wave
+  - decrease number of lives
 
   * Perhaps explosions should have a time delay parameter so clusters can be made all at once
 
