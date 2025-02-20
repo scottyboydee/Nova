@@ -25,6 +25,9 @@ public class LifeCycleManager : MonoBehaviour
     [SerializeField]
     private FadeController fadeController;
 
+    private bool splashLoaded = false;
+    private bool highscoresLoaded = false;
+
     private void Awake()
     {
         Instance = this;
@@ -37,7 +40,7 @@ public class LifeCycleManager : MonoBehaviour
         controls = new Controls();
         controls.Gameplay.Enable();
 
-        LoadSplash();
+        SetState(State.Loading);
     }
 
     public void SetState( State newState )
@@ -68,12 +71,16 @@ public class LifeCycleManager : MonoBehaviour
     }
     private void StateLoading()
     {
-        LoadSplash();
+        Debug.Log("StateLoading");
+        SceneManager.LoadScene(splashScene, LoadSceneMode.Additive);
+        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
     }
 
     private void StateSplash()
     {
-        Debug.Log("Splash completed loading. Waiting for input to play.");
+        Debug.Log("StateSplash: Scenes completed loading. Waiting for input to play.");
+        SceneUtils.SetSceneHierarchyActive(highscoresScene, false);
+        SceneUtils.SetSceneHierarchyActive(splashScene, true);
         fadeController.FadeToClear();
     }
 
@@ -88,14 +95,8 @@ public class LifeCycleManager : MonoBehaviour
 
         // Unload MainGame scene and load Highscores
         SceneManager.UnloadSceneAsync(mainGameScene);
-        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
-    }
-
-    public void LoadSplash()
-    {
-        Debug.Log("LifeCycleManager: LoadSplash");
-        // Start by loading splash scene additively
-        SceneManager.LoadScene(splashScene, LoadSceneMode.Additive);
+        //        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
+        SceneUtils.SetSceneHierarchyActive(highscoresScene, true);
     }
 
     public void LoadGame()
@@ -103,15 +104,6 @@ public class LifeCycleManager : MonoBehaviour
         Debug.Log("LifeCycleManager: LoadGame");
         // Load the game scene and optionally disable the splash screen
         SceneManager.LoadScene(mainGameScene, LoadSceneMode.Additive);
-    }
-
-    public void RestartGame()
-    {
-        Debug.Log("LifeCycleManager: RestartGame");
-
-        // Unload Highscores and reload MainGame
-        SceneManager.UnloadSceneAsync(highscoresScene);
-        LoadGame();
     }
 
     private void CheckFire()
@@ -148,7 +140,16 @@ public class LifeCycleManager : MonoBehaviour
 
         if( scene.name == splashScene )
         {
-            SetState(State.Splash);
+            splashLoaded = true;
+            if(highscoresLoaded)
+            {
+                Debug.Log("Got highscores, then splash loaded, moving on to splash state");
+                SetState(State.Splash);
+            }
+            else
+            {
+                Debug.Log("Got splash loaded, waiting on highscores");
+            }
         }
         else if( scene.name == mainGameScene ) 
         {
@@ -156,7 +157,16 @@ public class LifeCycleManager : MonoBehaviour
         }
         else if( scene.name == highscoresScene ) 
         {
-
+            SceneUtils.SetSceneHierarchyActive(highscoresScene, false);
+            highscoresLoaded = true;
+            if (splashLoaded)
+            {
+                SetState(State.Splash);
+            }
+            else
+            {
+                Debug.Log("Got highscores loaded, waiting on splash");
+            }
         }
         else
         {
