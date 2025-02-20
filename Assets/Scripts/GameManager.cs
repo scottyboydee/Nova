@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     private Player thePlayer;
     private Vector3 playerSpawnPos;
 
+    [SerializeField]
+    private LivesManager livesManager;
+
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -30,6 +33,14 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GameManager: PlayerDied!");
         thePlayer.gameObject.SetActive(false);
+
+        bool stillAlive = livesManager.RemoveLife();
+        if(stillAlive == false)
+        {
+            Debug.Log("PLAYER COMPLETELY OUT OF LIVES!!");
+            return;
+        }
+
         playerDeadPauseRemaining = pauseAfterPlayerDeath;
     }
 

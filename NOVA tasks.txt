@@ -3,7 +3,18 @@ NOVA tasks
 
 PLAYER DEATH
 * need a SPECIAL bigger explosion for the player
-* need an initial number of lives
+
+
+Lives manager
+- need an initial number of lives
+- Remove a life each time we die
+- and turn off one of the lives sprites
+- must be able to reset the lives by turning all the sprites back on
+  - and of course restoring the max number of lives
+- must know when we've died our last time
+  - for now, just spit out some debug
+
+
 * On death:
   * spawn explosion
   * need to hide the player
