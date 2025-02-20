@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("PLAYER COMPLETELY OUT OF LIVES!!");
             if(LifeCycleManager.Instance != null ) 
             {
-                LifeCycleManager.Instance.SetState(LifeCycleManager.State.Highscores);
+                LifeCycleManager.Instance.SetStateAfterFadeToBlack(LifeCycleManager.State.Highscores);
                 return;
             }
 

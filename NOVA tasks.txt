@@ -5,7 +5,15 @@ PLAYER DEATH
 * need a SPECIAL bigger explosion for the player
   ! the original uses a big central explosion and three small ones, on the nose and wings
 
-* Scene management
+Scene management
+- Loader scene, very minimal
+- Splash screen, quite minimal but will need:
+  - fading
+  - input to permit us to move forwards to the game
+  * possibly (later) make it alternate to the highscore screen? (and/or attract mode)
+  * starfield
+
+* Perhaps explosions should have a time delay parameter so clusters can be made all at once
 
 
 Lives manager
@@ -17,30 +25,13 @@ Lives manager
 - must know when we've died our last time
   - for now, just spit out some debug
 
-
-* On death:
+- On death:
   - spawn explosion
   - need to hide the player
   - can't shoot when dead :)
   - need a timer for when the player's killed (for now, use the same max value as between waves)
   - clean up the old wave
   - decrease number of lives
-
-  * Perhaps explosions should have a time delay parameter so clusters can be made all at once
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - want to be able to kill aliens
   - so the hit detection must tell them to die

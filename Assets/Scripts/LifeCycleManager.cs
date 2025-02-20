@@ -28,6 +28,8 @@ public class LifeCycleManager : MonoBehaviour
     private bool splashLoaded = false;
     private bool highscoresLoaded = false;
 
+    private State nextState;
+
     private void Awake()
     {
         Instance = this;
@@ -37,10 +39,27 @@ public class LifeCycleManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
 
+        // TODO: clean up the two instantiations of controls
         controls = new Controls();
         controls.Gameplay.Enable();
 
         SetState(State.Loading);
+    }
+
+    public void SetStateAfterFadeToBlack(State newState)
+    {
+        Debug.Log("SetStateAfterFades: " + newState);
+
+        nextState = newState;
+
+        fadeController.FadeToBlack(() => FadeToBlackCompleted());
+    }
+
+    private void FadeToBlackCompleted()
+    {
+        Debug.Log("FadeToBlackCompleted: state: " + state + " nextState: " + nextState);
+
+        SetState(nextState);
     }
 
     public void SetState( State newState )
@@ -69,6 +88,7 @@ public class LifeCycleManager : MonoBehaviour
         // Note: we only move on here, to avoid bad state sets, but this only happens on COMPLETION
         state = newState;
     }
+
     private void StateLoading()
     {
         Debug.Log("StateLoading");
@@ -78,7 +98,7 @@ public class LifeCycleManager : MonoBehaviour
 
     private void StateSplash()
     {
-        Debug.Log("StateSplash: Scenes completed loading. Waiting for input to play.");
+        Debug.Log("StateSplash");
         SceneUtils.SetSceneHierarchyActive(highscoresScene, false);
         SceneUtils.SetSceneHierarchyActive(splashScene, true);
         fadeController.FadeToClear();
@@ -86,6 +106,7 @@ public class LifeCycleManager : MonoBehaviour
 
     private void StateMainGame()
     {
+        Debug.Log("StateMainGame");
         LoadGame();
     }
 
@@ -97,6 +118,8 @@ public class LifeCycleManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(mainGameScene);
         //        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
         SceneUtils.SetSceneHierarchyActive(highscoresScene, true);
+
+        fadeController.FadeToClear();
     }
 
     public void LoadGame()
@@ -116,10 +139,10 @@ public class LifeCycleManager : MonoBehaviour
         switch ( state )
         {
             case State.Splash:
-                SetState(State.MainGame);
+                SetStateAfterFadeToBlack(State.MainGame);
                 break;
             case State.Highscores:
-                SetState(State.Splash);
+                SetStateAfterFadeToBlack(State.Splash);
                 break;
             default:
  //               Debug.Log("LifeCycleManager: Nothing to do with this input!");
@@ -154,6 +177,7 @@ public class LifeCycleManager : MonoBehaviour
         else if( scene.name == mainGameScene ) 
         {
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(mainGameScene));
+            fadeController.FadeToClear();
         }
         else if( scene.name == highscoresScene ) 
         {
