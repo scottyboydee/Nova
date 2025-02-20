@@ -1,9 +1,20 @@
 NOVA tasks
 
+* PLAYER MUST BE SCREEN BOUNDED!
+
+- Starfield!
 
 PLAYER DEATH
 * need a SPECIAL bigger explosion for the player
   ! the original uses a big central explosion and three small ones, on the nose and wings
+
+
+Bouncing Balls (Level 3)
+* get sprites
+* create a single baddie with new behaviour
+* initial velocity should have some random component
+* random component to the rebound, too, they can come away with MORE energy
+* they DO animate according to their direction of travel
 
 Scene management
 - Loader scene, very minimal

@@ -107,6 +107,7 @@ public class LifeCycleManager : MonoBehaviour
     private void StateMainGame()
     {
         Debug.Log("StateMainGame");
+        SceneUtils.SetSceneHierarchyActive(splashScene, false);
         LoadGame();
     }
 
