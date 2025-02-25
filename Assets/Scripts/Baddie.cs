@@ -9,16 +9,6 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
 
     public void Explode()
     {
-        /*
-        //        Debug.Log("Boom! We got shot!");
-                if( myAnimSprite == null )
-                {
-                    Debug.Log("No explosion anim to fire for: " + gameObject.name);
-                    return;
-                }
-                myAnimSprite.gameObject.SetActive(true);
-        */
-
         WaveManager.Instance.ExplosionManager.AddExplosion(gameObject);
     }
 

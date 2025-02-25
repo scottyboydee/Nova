@@ -3,22 +3,28 @@ using UnityEngine.UI;
 
 public class AnimSprite : MonoBehaviour
 {
-    [SerializeField] private Image targetImage;  // UI Image component
-    [SerializeField] private float framesPerSecond = 10f; // Playback speed
+    [SerializeField] private Image targetImage;              // UI Image component
+    [SerializeField] private float framesPerSecond = 10f;      // Playback speed
     [SerializeField] private bool disableOnFinish = false;
+    [SerializeField] private bool reverse = false;             // Toggle for reverse playback
     [SerializeField] private GameObject notifyObject;
-
     private INotify notifyTarget;
 
-    [SerializeField] private Sprite[] frames;    // Array of sprites
-
+    [SerializeField] private Sprite[] frames;                // Array of sprites
 
     private int currentFrame = 0;
     private float timer = 0f;
 
     private void Reset()
     {
-        currentFrame = 0;
+        // Set start frame based on playback direction
+        currentFrame = reverse ? frames.Length - 1 : 0;
+    }
+
+    // Making this a set function for trackability
+    public void SetReverse(bool reverse)
+    {
+        this.reverse = reverse;
     }
 
     private void Awake()
@@ -26,7 +32,6 @@ public class AnimSprite : MonoBehaviour
         if (notifyObject != null)
         {
             notifyTarget = notifyObject.GetComponent<INotify>();
-
             if (notifyTarget == null)
             {
                 Debug.LogError($"{notifyObject.name} does not implement INotify!");
@@ -40,29 +45,47 @@ public class AnimSprite : MonoBehaviour
             return;
 
         timer += Time.deltaTime;
-
         float frameDuration = 1f / framesPerSecond;
 
         if (timer >= frameDuration)
         {
-            timer -= frameDuration; // Preserve overflow to maintain accurate timing
-            int oldFrame = currentFrame;
-            currentFrame = (currentFrame + 1) % frames.Length;
+            timer -= frameDuration; // Preserve overflow for accurate timing
 
-            if( disableOnFinish && currentFrame < oldFrame )
+            if (!reverse)
             {
-                Reset();
-                if (notifyTarget != null)
+                currentFrame++;
+                if (currentFrame >= frames.Length)
                 {
-//                    Debug.Log("Notifying Target");
-                    notifyTarget.Notify(NotifyType.AnimFinished);
+                    if (disableOnFinish)
+                    {
+                        Reset();
+                        if (notifyTarget != null)
+                        {
+                            notifyTarget.Notify(NotifyType.AnimFinished);
+                        }
+                        gameObject.SetActive(false);
+                        return;
+                    }
+                    currentFrame = 0;
                 }
-                else
+            }
+            else
+            {
+                currentFrame--;
+                if (currentFrame < 0)
                 {
-//                    Debug.Log("No target to notify");
+                    if (disableOnFinish)
+                    {
+                        Reset();
+                        if (notifyTarget != null)
+                        {
+                            notifyTarget.Notify(NotifyType.AnimFinished);
+                        }
+                        gameObject.SetActive(false);
+                        return;
+                    }
+                    currentFrame = frames.Length - 1;
                 }
-                gameObject.SetActive(false);
-                return;
             }
 
             targetImage.sprite = frames[currentFrame];

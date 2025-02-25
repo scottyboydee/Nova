@@ -113,6 +113,7 @@ public class BaddieControlHorizontalLoop : MonoBehaviour
 
                 break;
             case Direction.Right:
+                myTransform.position += new Vector3(useSpeed, 0, 0);
 
                 if (myTransform.position.x >= bounds.xMax)
                 {
@@ -121,7 +122,6 @@ public class BaddieControlHorizontalLoop : MonoBehaviour
                     MoveUpDown();
                 }
 
-                myTransform.position += new Vector3(useSpeed, 0, 0);
                 break;
 
         }
