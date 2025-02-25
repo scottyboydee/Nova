@@ -16,8 +16,11 @@ public class WaveManager : MonoBehaviour
     [SerializeField]
     private float pauseBetweenWaves;
 
-    [SerializeField] 
-    private SO_WaveSet waveSet;
+    [SerializeField]
+    private GameObject waveBuilderPrefab;
+
+//    [SerializeField] 
+//    private SO_WaveSet waveSet;
 
     [SerializeField]
     private Wave[] waveBuilder;
@@ -40,6 +43,9 @@ public class WaveManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        // QoL so I don't have to keep turning subhierarchies on and off all the time in editor
+        waveBuilderPrefab?.SetActive(false);
     }
 
     void Start()
@@ -74,11 +80,13 @@ public class WaveManager : MonoBehaviour
     {
         Debug.Log("Creating ALL waves for testing...");
 
+/*
         if (waveSet == null)
         {
             Debug.LogError("NO WAVESET!!");
             return;
         }
+*/
 
         foreach (Wave wave in waveBuilder)
         {
