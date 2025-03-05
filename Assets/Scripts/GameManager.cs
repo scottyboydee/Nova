@@ -5,6 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
+    float scaleTime = 0.5f;
+
+    [SerializeField]
+    bool useScaleTime;
+
+    [SerializeField]
     private float pauseAfterPlayerDeath;
 
     private float playerDeadPauseRemaining = 0;
@@ -55,6 +61,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if( useScaleTime )
+        {
+            Debug.Log("GameManager: Overriding time speed to: " + scaleTime);
+            Time.timeScale = scaleTime;
+        }
+
         playerSpawnPos = thePlayer.transform.position;
         
     }
@@ -62,6 +74,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if( useScaleTime )
+        {
+            Time.timeScale = scaleTime;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
 
         if (playerDeadPauseRemaining > 0)
         {
