@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour, ICollide
 {
@@ -12,6 +13,9 @@ public class Player : MonoBehaviour, ICollide
 
     [SerializeField]
     private PlayerControls controls;
+
+    [SerializeField]
+    private Image playerSprite;
 
     // Start is called before the first frame update
     void Start()

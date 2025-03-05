@@ -10,20 +10,20 @@ public class BaddieVertSine : MonoBehaviour
     LeftRight Side;
 
     [SerializeField]
-    float speed = 100;
+    private float speed = 100;
 
     [SerializeField]
-    float sineOffset = 0;
+    private float sineOffset = 0;
 
     [SerializeField]
-    float sineScale = 0.1f;
+    private float sineScale = 0.1f;
 
     [SerializeField]
-    float sineMagnitude = 100;
+    private float sineMagnitude = 100;
 
-    float xStartPos;
+    private float xStartPos;
 
-    float spritePadSize = 0;
+    private float spritePadSize = 0;
 
     // Start is called before the first frame update
     void Start()

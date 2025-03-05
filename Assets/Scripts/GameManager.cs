@@ -5,10 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    float scaleTime = 0.5f;
+    private float scaleTime = 0.5f;
 
     [SerializeField]
-    bool useScaleTime;
+    private bool useScaleTime;
 
     [SerializeField]
     private float pauseAfterPlayerDeath;

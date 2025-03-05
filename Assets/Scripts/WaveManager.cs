@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    [SerializeField] private ExplosionManager explosionManager; // Set in Inspector
+    [SerializeField] 
+    private ExplosionManager explosionManager; // Set in Inspector
     public ExplosionManager ExplosionManager => explosionManager; // Read-only public access
 
-    [SerializeField] private BulletManager bulletManager; // Set in Inspector
+    [SerializeField] 
+    private BulletManager bulletManager; // Set in Inspector
     public BulletManager BulletManager => bulletManager; // Read-only public access
 
     [SerializeField]
-    int StartWave = 0;
+    private int StartWave = 0;
 
     [SerializeField]
-    GameObject waveParent;
+    private GameObject waveParent;
 
     [SerializeField]
     private float pauseBetweenWaves;

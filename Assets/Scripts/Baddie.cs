@@ -5,12 +5,12 @@ using UnityEngine;
 public class Baddie : MonoBehaviour, IExplode, ICollide
 {
     [SerializeField]
-    AnimSprite myAnimSprite;
+    private AnimSprite myAnimSprite;
 
     [SerializeField]
-    int MaxLives = 1;
+    private int MaxLives = 1;
 
-    int numLives;
+    private int numLives;
 
     public void Explode()
     {

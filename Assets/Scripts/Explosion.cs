@@ -5,7 +5,7 @@ using UnityEngine;
 public class Explosion : MonoBehaviour, INotify
 {
     [SerializeField]
-    AnimSprite mySprite;
+    private AnimSprite mySprite;
 
     private ExplosionManager manager;
 

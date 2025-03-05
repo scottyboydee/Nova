@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class PlayerGun : MonoBehaviour
 {
     [SerializeField]
-    GameObject sourceShot;
+    private GameObject sourceShot;
 
     [SerializeField]
-    GameObject playerShotsParent;
+    private GameObject playerShotsParent;
 
     static readonly int MAX_SHOTS = 10;
 
-    PlayerShot[] shots = new PlayerShot[MAX_SHOTS];
+    private PlayerShot[] shots = new PlayerShot[MAX_SHOTS];
 
     // Start is called before the first frame update
     void Start()
