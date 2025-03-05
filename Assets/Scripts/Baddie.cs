@@ -7,6 +7,11 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
     [SerializeField]
     AnimSprite myAnimSprite;
 
+    [SerializeField]
+    int MaxLives = 1;
+
+    int numLives;
+
     public void Explode()
     {
         WaveManager.Instance.ExplosionManager.AddExplosion(gameObject);
@@ -19,16 +24,29 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
         Destroy(gameObject);
     }
 
-    public void Collide()
+    private void LoseLife()
     {
- //       Debug.Log("Collide: I'm a baddie and I just got hit! Name: " + gameObject.name);
+        numLives--;
+
+        if (numLives > 0)
+        {
+            Debug.Log("Hit, but numLives: " + numLives + " > 0");
+            return;
+        }
+
         Explode();
         Die();
+    }
+
+    public void Collide()
+    {
+        LoseLife();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        numLives = MaxLives;
         WaveManager.Instance.AddBaddieToList(this);   
     }
 

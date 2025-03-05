@@ -11,6 +11,9 @@ public class WaveManager : MonoBehaviour
     public BulletManager BulletManager => bulletManager; // Read-only public access
 
     [SerializeField]
+    int StartWave = 0;
+
+    [SerializeField]
     GameObject waveParent;
 
     [SerializeField]
@@ -50,6 +53,8 @@ public class WaveManager : MonoBehaviour
 
     void Start()
     {
+        nextWaveNum = StartWave;
+
         NextWave();
 
 //        CreateAllWaves();

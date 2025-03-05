@@ -22,6 +22,10 @@ public class CollisionHandler : MonoBehaviour
 
 //            Debug.Log("PlayerShot found a collideRecipient to inform!");
             collideRecipient.Collide();
+
+            // also tell the shot itself
+            ICollide theShot = transform.parent.GetComponent<ICollide>();
+            theShot?.Collide();
         }
 
         if (gameObject.layer == LayerNames.BaddieShot)

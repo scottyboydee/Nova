@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShot : MonoBehaviour
+public class PlayerShot : MonoBehaviour, ICollide
 {
     [SerializeField]
     private float speed;
@@ -50,5 +50,10 @@ public class PlayerShot : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+    }
+
+    public void Collide()
+    {
+        Deactivate();
     }
 }

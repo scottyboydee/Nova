@@ -673,6 +673,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: MaxLives
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6565387159578066008, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -717,14 +721,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214097240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 110
   yAccel: 0.5
-  direction: 1
+  direction: 0
   animSprite: {fileID: 214097241}
 --- !u!1001 &239445483
 PrefabInstance:
@@ -920,6 +924,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: MaxLives
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6565387159578066008, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_SortingLayer
@@ -1546,6 +1554,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: MaxLives
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6565387159578066008, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -1590,7 +1602,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486860695}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
@@ -1946,6 +1958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: MaxLives
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6565387159578066008, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_SortingLayer
       value: 0
@@ -2084,7 +2100,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736116522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
@@ -2204,14 +2220,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803875665}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 110
   yAccel: 0.5
-  direction: 1
+  direction: 0
   animSprite: {fileID: 803875667}
 --- !u!1 &804510319
 GameObject:
@@ -2868,14 +2884,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008056530}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 110
   yAccel: 0.5
-  direction: 1
+  direction: 0
   animSprite: {fileID: 1008056532}
 --- !u!1001 &1060744078
 PrefabInstance:
@@ -3556,6 +3572,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: MaxLives
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6565387159578066008, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_SortingLayer
@@ -4905,6 +4925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionManager: {fileID: 1660278501}
   bulletManager: {fileID: 1660278502}
+  StartWave: 2
   waveParent: {fileID: 1864642009}
   pauseBetweenWaves: 2
   waveBuilderPrefab: {fileID: 1594479158}
@@ -6188,6 +6209,10 @@ PrefabInstance:
     - target: {fileID: 2886457180494845025, guid: ec59e9ec34628fb41b20963623ce6ed4, type: 3}
       propertyPath: m_Name
       value: Wave_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138391664467344485, guid: ec59e9ec34628fb41b20963623ce6ed4, type: 3}
+      propertyPath: MaxLives
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6320143245075232788, guid: ec59e9ec34628fb41b20963623ce6ed4, type: 3}
       propertyPath: m_Pivot.x
