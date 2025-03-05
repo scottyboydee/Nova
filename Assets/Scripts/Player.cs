@@ -36,6 +36,27 @@ public class Player : MonoBehaviour, ICollide
 
         gameObject.transform.position += moveBy;
 
+        ClampPosition();
+    }
+
+    private void ClampPosition()
+    {
+        float xMin = playerSprite.rectTransform.rect.width / 2;
+
+        if( transform.position.x < xMin )
+        {
+            transform.position = new Vector3(xMin, transform.position.y, 0);
+            controls.Reset();
+        }
+
+        float xMax = SpriteTools.Inst.Canvas.pixelRect.width - (playerSprite.rectTransform.rect.width / 2);
+
+        if (transform.position.x > xMax)
+        {
+            transform.position = new Vector3(xMax, transform.position.y, 0);
+            controls.Reset();
+        }
+
     }
 
     public void Fire()

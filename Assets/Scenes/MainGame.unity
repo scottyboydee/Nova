@@ -1465,6 +1465,7 @@ MonoBehaviour:
   gun: {fileID: 459164834}
   GunPos: {fileID: 596003689}
   controls: {fileID: 459164833}
+  playerSprite: {fileID: 459164831}
 --- !u!114 &459164831
 MonoBehaviour:
   m_ObjectHideFlags: 0
