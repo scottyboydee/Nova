@@ -487,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -1298,7 +1297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -1597,7 +1595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -2013,7 +2010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -2617,7 +2613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -3593,7 +3588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -4387,7 +4381,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -4840,7 +4833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -4971,7 +4963,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -5448,7 +5439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionManager: {fileID: 1660278501}
   bulletManager: {fileID: 1660278502}
-  StartWave: 3
+  StartWave: 0
   waveParent: {fileID: 1864642009}
   pauseBetweenWaves: 2
   waveBuilderPrefab: {fileID: 1594479158}
@@ -6353,7 +6344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015
@@ -6380,7 +6370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Side: 0
   speed: 100
   sineOffset: -100
   sineScale: 0.015

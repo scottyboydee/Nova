@@ -105,6 +105,7 @@ public class WaveManager : MonoBehaviour
         Debug.Log("Spawning Wave: " + wave.name);
 
         GameObject newWave = wave.gameObject.Clone(waveParent.transform, wave.name, Vector3.zero);
+        newWave.SetActive(true);
         RectTransform rectTransform = (RectTransform)newWave.transform;
         rectTransform.anchoredPosition = Vector2.zero;
     }
