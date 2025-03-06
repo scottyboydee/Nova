@@ -75,7 +75,7 @@ public class BaddieBounce : MonoBehaviour
 
         if (myTransform.position.y <= bounds.yMin)
         {
-            Debug.Log("Hit floor");
+//            Debug.Log("Hit floor");
             yVel = -yVel;
 
             myTransform.position = new Vector3(myTransform.position.x, bounds.yMin, myTransform.position.z);
