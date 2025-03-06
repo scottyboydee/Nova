@@ -34,7 +34,9 @@ public class Explosion : MonoBehaviour, INotify
         }
         else
         {
-            Debug.Log("No manager to inform of finished explosion");
+            // This is LIKELY going to be OK (/by design)
+            // but I wanted to be able to switch it on/debug if not
+//            Debug.Log("No manager to inform of finished explosion");
         }
     }
 

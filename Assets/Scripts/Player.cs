@@ -17,6 +17,9 @@ public class Player : MonoBehaviour, ICollide
     [SerializeField]
     private Image playerSprite;
 
+    [SerializeField]
+    private ExplosionGroup expGroup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +78,9 @@ public class Player : MonoBehaviour, ICollide
 
         GameManager.Instance.PlayerDied();
 
-        WaveManager.Instance.ExplosionManager.AddExplosion(gameObject);
+        //        WaveManager.Instance.ExplosionManager.AddExplosion(gameObject);
+        // Let's UPGRADE that boom to a BIG baddaboom using an explosionGROUP!
+        expGroup.Explode(transform.position);
 
         controls.Reset();
     }

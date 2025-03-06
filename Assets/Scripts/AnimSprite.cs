@@ -15,7 +15,7 @@ public class AnimSprite : MonoBehaviour
     private int currentFrame = 0;
     private float timer = 0f;
 
-    private void Reset()
+    public void Reset()
     {
         // Set start frame based on playback direction
         currentFrame = reverse ? frames.Length - 1 : 0;
