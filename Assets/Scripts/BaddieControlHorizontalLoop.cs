@@ -22,6 +22,7 @@ public class BaddieControlHorizontalLoop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // TODO: could probably just use an editor linkage here
         myTransform = GetComponent<RectTransform>();
 
         SetupBounds();
