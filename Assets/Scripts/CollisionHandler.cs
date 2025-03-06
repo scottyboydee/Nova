@@ -44,6 +44,14 @@ public class CollisionHandler : MonoBehaviour
 
         }
 
+        if (gameObject.layer == LayerNames.Player)
+        {
+            Debug.Log("I'm the PLAYER! Must have been smashed by a baddie!");
+
+            ICollide thePlayer = transform.parent.GetComponent<ICollide>();
+            thePlayer?.Collide();
+        }
+
     }
 }
 

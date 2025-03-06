@@ -76,6 +76,12 @@ public class Player : MonoBehaviour, ICollide
     {
         Debug.Log("Player here - I DIED!");
 
+        if( GameManager.Instance.Invulnerability )
+        {
+            Debug.Log("NOT DYING! I AM INVULNERABLE! HAAAHAHAHAAAA!");
+            return;
+        }
+
         GameManager.Instance.PlayerDied();
 
         //        WaveManager.Instance.ExplosionManager.AddExplosion(gameObject);

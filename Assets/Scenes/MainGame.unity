@@ -5939,7 +5939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionManager: {fileID: 1660278501}
   bulletManager: {fileID: 1660278502}
-  StartWave: 2
+  StartWave: 0
   waveParent: {fileID: 1864642009}
   pauseBetweenWaves: 2
   waveBuilderPrefab: {fileID: 1594479158}
@@ -5960,6 +5960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc5c06c06d5034498e284cdfe74bdc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invulnerability: 1
   scaleTime: 0.2
   useScaleTime: 0
   pauseAfterPlayerDeath: 2

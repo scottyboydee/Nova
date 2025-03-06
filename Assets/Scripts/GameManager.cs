@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
+    private bool invulnerability = false;
+    public bool Invulnerability => invulnerability;
+
+    [SerializeField]
     private float scaleTime = 0.5f;
 
     [SerializeField]
@@ -38,6 +42,7 @@ public class GameManager : MonoBehaviour
     public void PlayerDied()
     {
         Debug.Log("GameManager: PlayerDied!");
+        // TODO: move this inside the player, so it controls itself rather than GameManager doing so
         thePlayer.gameObject.SetActive(false);
 
         bool stillAlive = livesManager.RemoveLife();
@@ -102,6 +107,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("ResetPlayer");
         thePlayer.transform.position = playerSpawnPos;
+        // TODO: move this inside the player, so it controls itself rather than GameManager doing so
         thePlayer.gameObject.SetActive(true);
         WaveManager.Instance.RestartCurrentWave();
 
