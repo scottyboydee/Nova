@@ -1,4 +1,4 @@
-public interface ICollide
-{
-    void Collide();
-}
+    public interface ICollide
+    {
+        void Collide();
+    }

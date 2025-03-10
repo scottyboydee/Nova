@@ -5,12 +5,25 @@ using UnityEngine;
 public class Baddie : MonoBehaviour, IExplode, ICollide
 {
     [SerializeField]
-    private AnimSprite myAnimSprite;
-
-    [SerializeField]
     private int MaxLives = 1;
 
+    [SerializeField]
+    private GameObject notifyWhenDead;
+    private IDeathAction notifyTarget;
+
     private int numLives;
+
+    void Awake()
+    {
+        if (notifyWhenDead != null)
+        {
+            notifyTarget = notifyWhenDead.GetComponent<IDeathAction>();
+            if (notifyTarget == null)
+            {
+                Debug.LogError($"{notifyWhenDead.name} does not implement IDeathAction!");
+            }
+        }
+    }
 
     public void Explode()
     {
@@ -19,9 +32,12 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
 
     private void Die()
     {
-//        Debug.Log("Baddie Die: " + gameObject.name);
+        notifyTarget?.Died();
+        
+        //        Debug.Log("Baddie Die: " + gameObject.name);
         WaveManager.Instance.RemoveBaddieFromList(this);
         Destroy(gameObject);
+
     }
 
     private void LoseLife()
