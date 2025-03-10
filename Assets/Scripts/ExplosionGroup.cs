@@ -30,14 +30,15 @@ public class ExplosionGroup : MonoBehaviour
             return;
         }
 
-        ResetTimers();
-
-        gameObject.SetActive(false);
+        timer = new float[delay.Length];
+        for ( int i = 0; i < timer.Length; i++ )
+        {
+            timer[i] = TIMER_DONE;
+        }
     }
 
     private void ResetTimers()
     {
-        timer = new float[delay.Length];
         for (int i = 0; i < delay.Length; i++)
         {
             timer[i] = delay[i];
@@ -63,8 +64,6 @@ public class ExplosionGroup : MonoBehaviour
         {
             transform.position = matchPos;
         }
-
-        gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -81,7 +80,7 @@ public class ExplosionGroup : MonoBehaviour
             if (timer[i] > 0)
                 continue;
 
-            Debug.Log("ExplosionGroup " + gameObject.name + " firing explosion: " + explosions[i].name + " after time: " + delay[i]);
+//            Debug.Log("ExplosionGroup " + gameObject.name + " firing explosion: " + explosions[i].name + " after time: " + delay[i]);
 
             explosions[i].gameObject.SetActive(true);
 

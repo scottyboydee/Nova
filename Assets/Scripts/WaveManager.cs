@@ -140,7 +140,7 @@ public class WaveManager : MonoBehaviour
 
     private void StartPauseBeforeNextWave()
     {
-        Debug.Log("StartPauseBeforeNextWave: setting to: " + pauseBetweenWaves);
+//        Debug.Log("StartPauseBeforeNextWave: setting to: " + pauseBetweenWaves);
         nextWavePauseRemaining = pauseBetweenWaves;
     }
 
@@ -165,12 +165,12 @@ public class WaveManager : MonoBehaviour
         
         if( nextWavePauseRemaining > 0 )
         {
-            Debug.Log("Next Wave timer remain: " + nextWavePauseRemaining);
+//            Debug.Log("Next Wave timer remain: " + nextWavePauseRemaining);
             nextWavePauseRemaining -= Time.deltaTime;
 
             if( nextWavePauseRemaining < 0 )
             {
-                Debug.Log("Next Wave timer depleted! Spawning!");
+//                Debug.Log("Next Wave timer depleted! Spawning!");
                 nextWavePauseRemaining = 0;
                 NextWave();
             }

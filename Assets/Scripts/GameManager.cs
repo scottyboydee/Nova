@@ -90,12 +90,12 @@ public class GameManager : MonoBehaviour
 
         if (playerDeadPauseRemaining > 0)
         {
-            Debug.Log("Next Wave timer remain: " + playerDeadPauseRemaining);
+//            Debug.Log("Next Wave timer remain: " + playerDeadPauseRemaining);
             playerDeadPauseRemaining -= Time.deltaTime;
 
             if (playerDeadPauseRemaining < 0)
             {
-                Debug.Log("Next Wave timer depleted! Spawning!");
+//                Debug.Log("Next Wave timer depleted! Spawning!");
                 playerDeadPauseRemaining = 0;
                 ResetPlayer();
             }

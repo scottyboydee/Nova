@@ -28,28 +28,15 @@ public class CollisionHandler : MonoBehaviour
             theShot?.Collide();
         }
 
-        if (gameObject.layer == LayerNames.BaddieShot)
-        {
-            Debug.Log("I'm a BaddieShot! We must have hit the player!");
-
-            ICollide collideRecipient = other.transform.parent.GetComponent<ICollide>();
-            if (collideRecipient == null)
-            {
-                Debug.Log("EEK! CollisionHandler: BaddieShot didn't find collideRecipient!");
-                return;
-            }
-
-//            Debug.Log("BaddieShot found a collideRecipient to inform!");
-            collideRecipient.Collide();
-
-        }
-
         if (gameObject.layer == LayerNames.Player)
         {
-            Debug.Log("I'm the PLAYER! Must have been smashed by a baddie!");
+            Debug.Log("I'm the PLAYER! Must have been smashed by a baddie or bullet!");
 
             ICollide thePlayer = transform.parent.GetComponent<ICollide>();
             thePlayer?.Collide();
+
+            ICollide collideRecipient = other.transform.parent.GetComponent<ICollide>();
+            collideRecipient?.Collide();
         }
 
     }

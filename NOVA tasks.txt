@@ -1,10 +1,9 @@
 NOVA tasks
 
-PLAYER DEATH
-- need a SPECIAL bigger explosion for the player
-  ! the original uses a big central explosion and three small ones, on the nose and wings
-- need to cause baddies to kill you on collision (and not them)
-- need an invulnerability mode for testing
+
+
+
+
 
 Levels:
 
@@ -13,6 +12,7 @@ Levels:
 -3: bouncers v1
 -4: sine baddies 1+2
 -5: star trek - vertical linear bouncing, with slight speed variances in mirrored pairs
+
 *6: BIG bugs bursting to make 3 small bugs each
 *7: Zag left
 *8: Zag right
@@ -26,7 +26,18 @@ Levels:
 *16: a ship scrolls right to left, dropping minibouncers behind it, two layers worth
 *17: a tight semi-sine pattern top and bottom, that traps the player and doesn't repeat perfectly
 
-AND THAT'S IT?!?!?!
+AND THAT'S IT?!?!?! (evidently, I must have remembered it wrongly from my childhood!)
+  ... I think I may add a boss level for 'remix' mode.
+
+
+DONE tasks ---------------------------
+
+
+PLAYER DEATH
+- need a SPECIAL bigger explosion for the player
+  ! the original uses a big central explosion and three small ones, on the nose and wings
+- need to cause baddies to kill you on collision (and not them)
+- need an invulnerability mode for testing
 
 
 Bouncing Balls (Level 3)
