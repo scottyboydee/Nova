@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerShot : MonoBehaviour, ICollide
@@ -11,6 +12,13 @@ public class PlayerShot : MonoBehaviour, ICollide
     private RectTransform rectTransform;
 
     private PooledObject pooledObject;
+
+    private float heatSeek;
+
+    public void SetHeatSeek(float amount)
+    {
+        heatSeek = amount;
+    }
 
     public void Fire( Vector3 fromPos )
     {
@@ -27,6 +35,21 @@ public class PlayerShot : MonoBehaviour, ICollide
     void Update()
     {
         Move();
+        MoveHeatSeek();
+    }
+
+    private void MoveHeatSeek()
+    {
+        float useHeatSeek = heatSeek * Time.deltaTime;
+
+        if (useHeatSeek <= 0)
+            return;
+
+        float dx = GameManager.Instance.Player.transform.position.x - transform.position.x;
+
+        float moveX = Mathf.Clamp(dx, -useHeatSeek, useHeatSeek);
+
+        transform.position += new Vector3(moveX, 0, 0);
     }
 
     private void Move()

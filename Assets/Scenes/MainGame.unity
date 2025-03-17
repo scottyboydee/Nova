@@ -461,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &90994657
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,6 +930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!224 &181816234 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1790867195757940213, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
@@ -969,6 +971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &197257543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,6 +1492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!224 &281452937 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7867076907698577294, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
@@ -1843,6 +1847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &329501106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,6 +1974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1001 &413132883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2693,6 +2699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!224 &486987953 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5534631108897113116, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
@@ -2967,6 +2974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &506151308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3022,6 +3030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1001 &553501977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3422,6 +3431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &615027759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3461,6 +3471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &626036708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3630,6 +3641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &639794000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -3683,6 +3695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &641079366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -3736,6 +3749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1001 &661188076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4115,6 +4129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &700692830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -4168,6 +4183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4315,6 +4331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!224 &734420412 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2857641413280280199, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
@@ -4471,6 +4488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &752651216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4621,6 +4639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &785555170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4689,6 +4708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &804510319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,6 +4808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &806021544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4972,6 +4993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1001 &832147580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5235,6 +5257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &860580355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -5259,6 +5282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &860580358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5402,6 +5426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1001 &903669886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5709,6 +5734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &960380443 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -5748,6 +5774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5987,6 +6014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1001 &989768363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6163,6 +6191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1001 &1060744078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6527,6 +6556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &1134000811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -6680,6 +6710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &1164909288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6852,6 +6883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &1215317466
 GameObject:
   m_ObjectHideFlags: 0
@@ -7295,6 +7327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1001 &1313101239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7422,6 +7455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &1317222365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7993,6 +8027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1001 &1450203419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8157,6 +8192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &1454011833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -8444,6 +8480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &1489109133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8619,6 +8656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1001 &1578975520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8936,6 +8974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &1648986985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9010,10 +9049,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc5c06c06d5034498e284cdfe74bdc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerability: 0
+  invulnerability: 1
   scaleTime: 0.5
   useScaleTime: 0
-  useSceneView: 1
+  useSceneView: 0
   pauseAfterPlayerDeath: 2
   thePlayer: {fileID: 459164830}
   livesManager: {fileID: 1906672097}
@@ -9202,6 +9241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1001 &1721482512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9357,6 +9397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &1794527720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -9396,6 +9437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &1806628329
 GameObject:
   m_ObjectHideFlags: 0
@@ -9510,6 +9552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &1809595197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -9563,6 +9606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1001 &1856761923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9743,6 +9787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &1864642009
 GameObject:
   m_ObjectHideFlags: 0
@@ -9831,6 +9876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &1892652395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -9870,6 +9916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!224 &1896897756 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4065424412473557060, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
@@ -10034,6 +10081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!1 &2012148832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8841872943723444780, guid: 03a6d1db59d88754f92c60ebb906e92e, type: 3}
@@ -10577,6 +10625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &2122395375
 GameObject:
   m_ObjectHideFlags: 0
@@ -10928,6 +10977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!1 &2131390751 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7013157988574781431, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
@@ -10981,6 +11031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.02
+  heatSeek: 30
 --- !u!224 &213962268776927394 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3288784631144184304, guid: e0b5c88094e38624ba7a7372b4c65684, type: 3}
@@ -11985,6 +12036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0.1
   Probability: 0.03
+  heatSeek: 0
 --- !u!114 &4519183911422109530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 559194706471466899, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
@@ -12179,6 +12231,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6d83125425b52744dbbbf4d6d5fe15d9, type: 3}
+    - target: {fileID: 500200777513597849, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 526408848598617154, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 841805222637017670, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 1013132510218939947, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: myBaddie
       value: 
@@ -12190,6 +12254,14 @@ PrefabInstance:
     - target: {fileID: 1013132510218939947, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: startDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083162213296465135, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170892843246892177, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1339106459619361746, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12206,6 +12278,10 @@ PrefabInstance:
     - target: {fileID: 1447632701842798354, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: startDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605643199412444347, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1749763505340273812, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12251,6 +12327,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -544
       objectReference: {fileID: 0}
+    - target: {fileID: 2909541239297041546, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3066477469964403541, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12259,9 +12339,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -224
       objectReference: {fileID: 0}
+    - target: {fileID: 3084386323359287220, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 3403639197327089997, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423473507097899189, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3559341880681187857, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12274,6 +12362,10 @@ PrefabInstance:
     - target: {fileID: 4065424412473557060, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -480
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169187224441899559, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4316552088551281484, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_Pivot.x
@@ -12379,6 +12471,10 @@ PrefabInstance:
       propertyPath: startDirection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4467543764516586217, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4545110440648111086, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: myBaddie
       value: 
@@ -12407,9 +12503,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -96
       objectReference: {fileID: 0}
+    - target: {fileID: 4787109928911671235, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4840051244961128349, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853569208635133644, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973344848788412314, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5266532292336486481, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: myBaddie
@@ -12475,6 +12583,10 @@ PrefabInstance:
       propertyPath: startDirection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6269151064289565604, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6395203145504626393, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12527,6 +12639,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -288
       objectReference: {fileID: 0}
+    - target: {fileID: 7464754432583713215, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7599443226481243164, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -320
@@ -12542,6 +12658,10 @@ PrefabInstance:
     - target: {fileID: 7609541437878638778, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: startDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636619381124429248, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7867076907698577294, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12591,6 +12711,14 @@ PrefabInstance:
       propertyPath: startDirection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8406391384459879477, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417451705777788801, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8558663734465566410, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12606,6 +12734,10 @@ PrefabInstance:
     - target: {fileID: 8578574371422443248, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: startDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687753314948999175, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
+      propertyPath: heatSeek
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 9199874644770052576, guid: 8a44c957c1a3399418203b80145daa30, type: 3}
       propertyPath: m_Sprite

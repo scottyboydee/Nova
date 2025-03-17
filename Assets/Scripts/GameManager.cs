@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Player thePlayer;
     private Vector3 playerSpawnPos;
+    public Player Player { get { return thePlayer; } }
 
     [SerializeField]
     private LivesManager livesManager;

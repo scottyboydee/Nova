@@ -13,7 +13,7 @@ public class BulletManager : MonoBehaviour
 
     private ObjectPool<PlayerShot> baddieBulletPool;
 
-    internal void AddBaddieShot(GameObject anchor)
+    internal void AddBaddieShot(GameObject anchor, float heatSeek = 0.0f)
     {
         if (anchor == null)
         {
@@ -24,6 +24,7 @@ public class BulletManager : MonoBehaviour
 //        Debug.Log("AddBaddieShot from: " + anchor.name);
 
         PlayerShot newItem = baddieBulletPool.Get();
+        newItem.SetHeatSeek(heatSeek);
         newItem.transform.position = anchor.transform.position;
     }
 

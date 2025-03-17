@@ -10,7 +10,11 @@ public class BulletSpitter : MonoBehaviour
     [SerializeField]
     private float Probability = 1.0f;
 
+    [SerializeField]
+    private float heatSeek = 0.0f;
+
     private float timeLeft;
+
 
 
     // Start is called before the first frame update
@@ -48,6 +52,6 @@ public class BulletSpitter : MonoBehaviour
     private void Fire()
     {
 //        Debug.Log("FIRE!");
-        WaveManager.Instance.BulletManager.AddBaddieShot(gameObject);
+        WaveManager.Instance.BulletManager.AddBaddieShot(gameObject, heatSeek);
     }
 }
