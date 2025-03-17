@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     private bool useScaleTime;
 
     [SerializeField]
+    public bool useSceneView = false;
+
+    [SerializeField]
     private float pauseAfterPlayerDeath;
 
     private float playerDeadPauseRemaining = 0;
@@ -37,6 +40,13 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+#if UNITY_EDITOR
+        if (useSceneView)
+        {
+            UnityEditor.SceneView.FocusWindowIfItsOpen(typeof(UnityEditor.SceneView));
+        }
+#endif
     }
 
     public void PlayerDied()
