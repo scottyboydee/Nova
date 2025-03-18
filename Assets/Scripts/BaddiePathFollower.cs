@@ -21,6 +21,16 @@ public class BaddiePathFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdatePositionFromPath();
+    }
+
+    private void UpdatePositionFromPath()
+    {
+        float useSpeed = Speed * Time.deltaTime;
+        progress += useSpeed;
+
+        Vector3 newPos = Path.GetPointFromProgress(progress);
+
+        transform.position = newPos;
     }
 }

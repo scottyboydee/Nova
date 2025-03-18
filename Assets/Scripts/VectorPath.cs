@@ -8,7 +8,7 @@ public class VectorPath : MonoBehaviour
     private GameObject Cursor;
 
     [SerializeField]
-    private float speed = 50;
+    private float CursorSpeed = 50;
 
     private float progress;
 
@@ -33,13 +33,13 @@ public class VectorPath : MonoBehaviour
             Transform child = transform.GetChild(i);
             pathPoints[i] = child.position;
 
-            if(i > 1)
+            if(i > 0)
             {
                 Vector3 delta = pathPoints[i] - pathPoints[i - 1];
                 totalPathLength += delta.magnitude;
             }
 
-//            Debug.Log("Point: " + i + " pos: " + pathPoints[i] + " name: " + child.name + " totalPathLength: " + totalPathLength);
+            Debug.Log("Point: " + i + " pos: " + pathPoints[i] + " name: " + child.name + " totalPathLength: " + totalPathLength);
         }
     }
 
@@ -52,7 +52,7 @@ public class VectorPath : MonoBehaviour
 
     private void UpdateCursor()
     {
-        float useSpeed = speed * Time.deltaTime;
+        float useSpeed = CursorSpeed * Time.deltaTime;
 
         progress += useSpeed;
 
