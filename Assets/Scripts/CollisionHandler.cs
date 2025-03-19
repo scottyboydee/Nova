@@ -8,7 +8,7 @@ public class CollisionHandler : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision! " + other.gameObject.name + " entered " + gameObject.name);
+//        Debug.Log("Collision! " + other.gameObject.name + " entered " + gameObject.name);
 
         if( gameObject.layer == LayerNames.PlayerShot)
         {
@@ -30,7 +30,7 @@ public class CollisionHandler : MonoBehaviour
 
         if (gameObject.layer == LayerNames.Player)
         {
-            Debug.Log("I'm the PLAYER! Must have been smashed by a baddie or bullet!");
+//            Debug.Log("I'm the PLAYER! Must have been smashed by a baddie or bullet!");
 
             ICollide thePlayer = transform.parent.GetComponent<ICollide>();
             thePlayer?.Collide();

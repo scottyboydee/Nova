@@ -39,7 +39,7 @@ public class VectorPath : MonoBehaviour
                 totalPathLength += delta.magnitude;
             }
 
-            Debug.Log("Point: " + i + " pos: " + pathPoints[i] + " name: " + child.name + " totalPathLength: " + totalPathLength);
+//            Debug.Log("Point: " + i + " pos: " + pathPoints[i] + " name: " + child.name + " totalPathLength: " + totalPathLength);
         }
     }
 
