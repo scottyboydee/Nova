@@ -2,6 +2,16 @@ NOVA tasks
 
 
 
+Tech Debt:
+
+* Separate play preferences (slowmo, start level, etc) into a scriptable object, perhaps
+  so that we don't have to check it in. This would be wildly annoying if I were in a team.
+
+* Bouncer prefab doesn't contain its bouncer behaviour, they're in the wave's override
+
+* revisit colliders, these plectrum shapes are used inappropriately in many instances
+
+* revisit collision full stop, as there are some pop-through issues, need sweeps
 
 
 
