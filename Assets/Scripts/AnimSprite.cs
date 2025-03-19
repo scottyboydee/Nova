@@ -3,14 +3,28 @@ using UnityEngine.UI;
 
 public class AnimSprite : MonoBehaviour
 {
-    [SerializeField] private Image targetImage;              // UI Image component
-    [SerializeField] private float framesPerSecond = 10f;      // Playback speed
-    [SerializeField] private bool disableOnFinish = false;
-    [SerializeField] private bool reverse = false;             // Toggle for reverse playback
-    [SerializeField] private GameObject notifyObject;
+    [SerializeField] 
+    private Image targetImage;              // UI Image component
+
+    [SerializeField] 
+    private float framesPerSecond = 10f;      // Playback speed
+
+    [SerializeField] 
+    private bool disableOnFinish = false;
+
+    [SerializeField] 
+    private bool reverse = false;             // Toggle for reverse playback
+
+    [SerializeField]
+    private bool randomStartFrame;
+
+    [SerializeField] 
+    private GameObject notifyObject;
+
     private INotify notifyTarget;
 
-    [SerializeField] private Sprite[] frames;                // Array of sprites
+    [SerializeField] 
+    private Sprite[] frames;                // Array of sprites
 
     private int currentFrame = 0;
     private float timer = 0f;
@@ -36,6 +50,11 @@ public class AnimSprite : MonoBehaviour
             {
                 Debug.LogError($"{notifyObject.name} does not implement INotify!");
             }
+        }
+
+        if(randomStartFrame)
+        {
+            currentFrame = Random.Range(0, frames.Length);
         }
     }
 
