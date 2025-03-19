@@ -17,6 +17,19 @@ public enum Direction
     Right
 }
 
+public enum Direction8Way
+{
+    None,
+    Up,
+    Down,
+    Left,
+    Right,
+    UpLeft,
+    UpRight,
+    DownLeft,
+    DownRight,
+}
+
 public class SpriteTools : MonoBehaviour
 {
     public static readonly Vector3[] DirectionToVector3 =
@@ -26,6 +39,19 @@ public class SpriteTools : MonoBehaviour
         new Vector3( 0, -1, 0 ),
         new Vector3( -1, 0, 0 ),
         new Vector3( 1, 0, 0 ),
+    };
+
+    public static readonly Vector3[] Direction8WayToVector3 =
+{
+        new Vector3( 0, 0, 0 ),
+        new Vector3( 0, 1, 0 ),
+        new Vector3( 0, -1, 0 ),
+        new Vector3( -1, 0, 0 ),
+        new Vector3( 1, 0, 0 ),
+        new Vector3( -1, 1, 0 ),
+        new Vector3( 1, 1, 0 ),
+        new Vector3( -1, -1, 0 ),
+        new Vector3( 1, -1, 0 ),
     };
 
     [SerializeField]
