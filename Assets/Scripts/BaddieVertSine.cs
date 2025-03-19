@@ -44,7 +44,7 @@ public class BaddieVertSine : MonoBehaviour
         if(image != null )
         {
             spritePadSize = image.rectTransform.rect.width / 2;
-            Debug.Log("Got spritePadSize: "+ spritePadSize);
+//            Debug.Log("Got spritePadSize: "+ spritePadSize);
         }
         
     }
