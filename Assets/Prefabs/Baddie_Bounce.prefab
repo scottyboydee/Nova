@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 3397544320573320077}
   - component: {fileID: 4035655422588730}
   m_Layer: 0
-  m_Name: BaddieBounce
+  m_Name: Baddie_Bounce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

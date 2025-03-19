@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LadybugBabyContainer : MonoBehaviour, IDeathAction
+public class BaddieChildContainer : MonoBehaviour, IDeathAction
 {
     [SerializeField]
-    private BaddieVertSine[] baby;
+    private GameObject[] baby;
 
     public void Died()
     {
