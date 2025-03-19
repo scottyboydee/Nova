@@ -10,14 +10,15 @@ Levels:
 -1: hoz baddies 1 (from the left)
 -2: hoz baddies 2 (from the right)
 -3: bouncers v1
--4: sine baddies 1+2
+-4: sine baddies
 -5: star trek - vertical linear bouncing, with slight speed variances in mirrored pairs
+-6: BIG bugs bursting to make 3 small bugs each
+-7: Zag left
+-8: Zag right
+-9: semicircle bottom from right top from left
 
-*6: BIG bugs bursting to make 3 small bugs each
-*7: Zag left
-*8: Zag right
-*9: semicircle bottom from right top from left
 *10: bags of bouncers
+
 *11: infinity, 2 lives, comes from top right, then loops
 *12: serpentine, starting bottom left and right, winding inwards
 *13: buglike spitters of smaller baddies that obey mini sine paths. one at the top, one below, bouncing left/right. they seem to spit a max number of them until the screen is quite full
