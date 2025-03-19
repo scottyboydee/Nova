@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6320143245075232788
 RectTransform:
   m_ObjectHideFlags: 0
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 110
   yAccel: 0.5
-  direction: 0
+  direction: 1
   animSprite: {fileID: 4104800764979326569}
 --- !u!1001 &4162614100024597711
 PrefabInstance:
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 110
   yAccel: 0.5
-  direction: 0
+  direction: 1
   animSprite: {fileID: 4164357478220934133}
 --- !u!1001 &7523750749005436904
 PrefabInstance:
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 110
   yAccel: 0.5
-  direction: 0
+  direction: 1
   animSprite: {fileID: 7811314086844222770}
 --- !u!224 &6990803913068422325 stripped
 RectTransform:
