@@ -17,7 +17,7 @@ public class LivesManager : MonoBehaviour
 
     private void Reset()
     {
-        Debug.Log("LivesManager: Reset");
+//        Debug.Log("LivesManager: Reset");
 
         foreach (var item in lifeIcons) 
         {
