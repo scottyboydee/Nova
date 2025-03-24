@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class BaddiePathFollower : MonoBehaviour
 {
     [SerializeField]
     private VectorPath Path;
+
+    [SerializeField]
+    private Baddie removeOnPathComplete;
 
     [SerializeField]
     private float Speed;
@@ -38,9 +43,16 @@ public class BaddiePathFollower : MonoBehaviour
     {
         float useSpeed = Speed * Time.deltaTime;
         progress += useSpeed;
+        var(pos, complete) = Path.GetPointFromProgress(progress);
 
-        Vector3 newPos = Path.GetPointFromProgress(progress);
+        if (removeOnPathComplete != null)
+        {
+            if (complete)
+            {
+                removeOnPathComplete.RemoveYourself();
+            }
+        }
 
-        transform.position = newPos;
+        transform.position = pos;
     }
 }

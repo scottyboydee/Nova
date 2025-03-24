@@ -68,14 +68,19 @@ public class VectorPath : MonoBehaviour
 
         cursorProgress += useSpeed;
 
-        Cursor.transform.position = GetPointFromProgress(cursorProgress);
+        var (pos, complete) = GetPointFromProgress(cursorProgress);
+        Cursor.transform.position = pos;
     }
 
-    public Vector3 GetPointFromProgress(float progress)
+    public (Vector3 position, bool complete) GetPointFromProgress(float progress)
     {
+        bool pathComplete = false;
+
         int startIndex = 0;
         if(progress > totalPathLength)
         {
+            pathComplete = true;
+
             progress -= totalPathLength;
             progress %= loopPathLength;
             startIndex = loopRestartIndex;
@@ -103,6 +108,6 @@ public class VectorPath : MonoBehaviour
             break;
         }
 
-        return result;
+        return (result, pathComplete);
     }
 }

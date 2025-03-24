@@ -32,12 +32,22 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
 
     private void Die()
     {
+        //        Debug.Log("Baddie Die: " + gameObject.name);
         notifyTarget?.Died();
         
-        //        Debug.Log("Baddie Die: " + gameObject.name);
+        removeFromWave();
+    }
+
+    private void removeFromWave()
+    {
         WaveManager.Instance.RemoveBaddieFromList(this);
         Destroy(gameObject);
+    }
 
+    // gosh, this sounds very authoritarian...
+    public void RemoveYourself()
+    {
+        removeFromWave();
     }
 
     private void LoseLife()

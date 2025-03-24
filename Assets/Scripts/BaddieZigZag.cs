@@ -28,9 +28,6 @@ public class BaddieZigZag : MonoBehaviour
 
     private float delayTimer;
 
-    private bool hasBeenOnScreen = false;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +43,6 @@ public class BaddieZigZag : MonoBehaviour
         }
         CalculateNextPosition();
     }
-
 
     private void CalculateNextPosition()
     {
@@ -93,29 +89,8 @@ public class BaddieZigZag : MonoBehaviour
             return;
 
         UpdateMove();
+     }
 
-        CheckOffscreen();
-    }
-
-    private void CheckOffscreen()
-    {
-        SpriteTools.Enclose enclosed = SpriteTools.Inst.CheckEnclosure(spriteRect);
-
-        if (hasBeenOnScreen == false)
-        {
-            if (enclosed != SpriteTools.Enclose.Inside)
-                return;
-
-            hasBeenOnScreen = true;
-            return;
-        }
-
-        if (enclosed != SpriteTools.Enclose.Outside)
-            return;
-
-        WaveManager.Instance.RemoveBaddieFromList(myBaddie);
-        Destroy(gameObject);
-    }
     private void UpdateMove()
     {
         float moveDist = speed * Time.deltaTime;
