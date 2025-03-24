@@ -10,18 +10,23 @@ public class VectorPath : MonoBehaviour
     [SerializeField]
     private float CursorSpeed = 50;
 
-    private float progress;
+    [SerializeField]
+    private int loopRestartIndex = 0;
+
+    private float cursorProgress;
 
     private Vector3[] pathPoints;
 
     private float totalPathLength = 0;
+
+    private float loopPathLength = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         SetupPath();
 
-        progress = 0;
+        cursorProgress = 0;
     }
 
     private void SetupPath()
@@ -37,6 +42,13 @@ public class VectorPath : MonoBehaviour
             {
                 Vector3 delta = pathPoints[i] - pathPoints[i - 1];
                 totalPathLength += delta.magnitude;
+
+                if(i > loopRestartIndex)
+                {
+                    loopPathLength += delta.magnitude;
+                }
+
+                Debug.Log("totalPathLength: " + totalPathLength + " loopPathLength: " + loopPathLength);
             }
 
 //            Debug.Log("Point: " + i + " pos: " + pathPoints[i] + " name: " + child.name + " totalPathLength: " + totalPathLength);
@@ -46,7 +58,7 @@ public class VectorPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( Cursor != null )
+        if( Cursor != null && Cursor.activeInHierarchy )
             UpdateCursor();
     }
 
@@ -54,20 +66,28 @@ public class VectorPath : MonoBehaviour
     {
         float useSpeed = CursorSpeed * Time.deltaTime;
 
-        progress += useSpeed;
+        cursorProgress += useSpeed;
 
-        Cursor.transform.position = GetPointFromProgress(progress);
+        Cursor.transform.position = GetPointFromProgress(cursorProgress);
     }
 
     public Vector3 GetPointFromProgress(float progress)
     {
-        progress = progress % totalPathLength;
+        int startIndex = 0;
+        if(progress > totalPathLength)
+        {
+            progress -= totalPathLength;
+            progress %= loopPathLength;
+            startIndex = loopRestartIndex;
+        }
+
+//        Debug.Log("progress: " + progress + " startIndex: " + startIndex);
 
         float cumulativeDist = 0;
 
         Vector3 result = new Vector3();
 
-        for (int i = 0; i < pathPoints.Length - 1; i++)
+        for (int i = startIndex; i < pathPoints.Length - 1; i++)
         {
             Vector3 delta = pathPoints[i + 1] - pathPoints[i];
 
