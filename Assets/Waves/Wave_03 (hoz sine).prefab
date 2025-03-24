@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3288784631144184304}
   - component: {fileID: 8746564939055208945}
   m_Layer: 0
-  m_Name: Wave_04
+  m_Name: Wave_03 (hoz sine)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,25 +17,25 @@ Tech Debt:
 
 Levels:
 
--1: hoz baddies 1 (from the left)
--2: hoz baddies 2 (from the right)
--3: bouncers v1
--4: sine baddies
--5: star trek - vertical linear bouncing, with slight speed variances in mirrored pairs
--6: BIG bugs bursting to make 3 small bugs each
--7: Zag left
--8: Zag right
--9: semicircle bottom from right top from left
+-00: simple looper 1 (from the left)
+-01: simple looper 2 (from the right)
+-02: bouncers v1
+-03: sine baddies
+-04: star trek - vertical linear bouncing, with slight speed variances in mirrored pairs
+-05: BIG bugs bursting to make 3 small bugs each
+-06: Zag left
+-07: Zag right
+-08: semicircle bottom from right top from left
+-09: bags of bouncers
 
-*10: bags of bouncers
+*10: infinity, 2 lives, comes from top right, then loops
+*11: serpentine, starting bottom left and right, winding inwards
 
-*11: infinity, 2 lives, comes from top right, then loops
-*12: serpentine, starting bottom left and right, winding inwards
-*13: buglike spitters of smaller baddies that obey mini sine paths. one at the top, one below, bouncing left/right. they seem to spit a max number of them until the screen is quite full
-*14: two groups come in from the left at the same time, different heights, move into circle patterns, with one inside the other
-*15: bouncers: LOTS of them, and they take more hits
-*16: a ship scrolls right to left, dropping minibouncers behind it, two layers worth
-*17: a tight semi-sine pattern top and bottom, that traps the player and doesn't repeat perfectly
+*12: buglike spitters of smaller baddies that obey mini sine paths. one at the top, one below, bouncing left/right. they seem to spit a max number of them until the screen is quite full
+*13: two groups come in from the left at the same time, different heights, move into circle patterns, with one inside the other
+*14: bouncers: LOTS of them, and they take more hits
+*15: a ship scrolls right to left, dropping minibouncers behind it, two layers worth
+*16: a tight semi-sine pattern top and bottom, that traps the player and doesn't repeat perfectly
 
 AND THAT'S IT?!?!?! (evidently, I must have remembered it wrongly from my childhood!)
   ... I think I may add a boss level for 'remix' mode.

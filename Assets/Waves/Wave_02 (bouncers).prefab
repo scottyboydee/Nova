@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6320143245075232788}
   - component: {fileID: 7068387279985562296}
   m_Layer: 0
-  m_Name: Wave_03
+  m_Name: Wave_02 (bouncers)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
