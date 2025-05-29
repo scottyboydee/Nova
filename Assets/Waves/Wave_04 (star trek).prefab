@@ -143,6 +143,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486483707685632236, guid: 224b0e935dc9c3d47b8ee952d30901b8, type: 3}
+      propertyPath: Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486483707685632236, guid: 224b0e935dc9c3d47b8ee952d30901b8, type: 3}
       propertyPath: MaxLives
       value: 3
       objectReference: {fileID: 0}
@@ -284,6 +288,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486483707685632236, guid: 224b0e935dc9c3d47b8ee952d30901b8, type: 3}
+      propertyPath: Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486483707685632236, guid: 224b0e935dc9c3d47b8ee952d30901b8, type: 3}
       propertyPath: MaxLives
       value: 3
       objectReference: {fileID: 0}
@@ -344,6 +352,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 708574957562636391}
     m_Modifications:
+    - target: {fileID: 2081952027282691969, guid: 44446d0cb59f4de43a43a96ee56daaa2, type: 3}
+      propertyPath: Value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2081952027282691969, guid: 44446d0cb59f4de43a43a96ee56daaa2, type: 3}
       propertyPath: MaxLives
       value: 3
@@ -566,6 +578,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3486483707685632236, guid: 224b0e935dc9c3d47b8ee952d30901b8, type: 3}
+      propertyPath: Value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486483707685632236, guid: 224b0e935dc9c3d47b8ee952d30901b8, type: 3}
       propertyPath: MaxLives
       value: 3
       objectReference: {fileID: 0}
@@ -626,6 +642,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 708574957562636391}
     m_Modifications:
+    - target: {fileID: 2081952027282691969, guid: 44446d0cb59f4de43a43a96ee56daaa2, type: 3}
+      propertyPath: Value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2081952027282691969, guid: 44446d0cb59f4de43a43a96ee56daaa2, type: 3}
       propertyPath: MaxLives
       value: 3
@@ -767,6 +787,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 708574957562636391}
     m_Modifications:
+    - target: {fileID: 2081952027282691969, guid: 44446d0cb59f4de43a43a96ee56daaa2, type: 3}
+      propertyPath: Value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2081952027282691969, guid: 44446d0cb59f4de43a43a96ee56daaa2, type: 3}
       propertyPath: MaxLives
       value: 3

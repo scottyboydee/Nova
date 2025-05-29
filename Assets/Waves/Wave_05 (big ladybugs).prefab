@@ -72,6 +72,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_Ladybug 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[0]
+      value: 
+      objectReference: {fileID: 5870838806966784828}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[1]
+      value: 
+      objectReference: {fileID: 6163998555000130269}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[2]
+      value: 
+      objectReference: {fileID: 1019445061318164748}
+    - target: {fileID: 6350378065933698121, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: Value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7026118572266993725, guid: 699233390d08b3f47927e549db167d21, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -161,6 +177,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 699233390d08b3f47927e549db167d21, type: 3}
+--- !u!1 &1019445061318164748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1688698303592565666, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 1822477671244090030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5870838806966784828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5202736203593456018, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 1822477671244090030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6163998555000130269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530510288544596083, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 1822477671244090030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7142840686951381975 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8821084971258376569, guid: 699233390d08b3f47927e549db167d21, type: 3}
@@ -182,9 +213,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_Ladybug 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[0]
+      value: 
+      objectReference: {fileID: 7589758015307250173}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[1]
+      value: 
+      objectReference: {fileID: 7901486926267899932}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[2]
+      value: 
+      objectReference: {fileID: 3893537353527978957}
     - target: {fileID: 3178243284972442524, guid: 699233390d08b3f47927e549db167d21, type: 3}
       propertyPath: m_SortingLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350378065933698121, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: Value
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8821084971258376569, guid: 699233390d08b3f47927e549db167d21, type: 3}
       propertyPath: m_Pivot.x
@@ -271,9 +318,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 699233390d08b3f47927e549db167d21, type: 3}
+--- !u!1 &3893537353527978957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1688698303592565666, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 2407149471915794543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6560939520356454678 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8821084971258376569, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 2407149471915794543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7589758015307250173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5202736203593456018, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 2407149471915794543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7901486926267899932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530510288544596083, guid: 699233390d08b3f47927e549db167d21, type: 3}
   m_PrefabInstance: {fileID: 2407149471915794543}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2700782811017504117
@@ -295,6 +357,22 @@ PrefabInstance:
     - target: {fileID: 1297445323258984497, guid: 699233390d08b3f47927e549db167d21, type: 3}
       propertyPath: m_Name
       value: Baddie_Ladybug 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[0]
+      value: 
+      objectReference: {fileID: 7874771183523953895}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[1]
+      value: 
+      objectReference: {fileID: 7618764998545106182}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[2]
+      value: 
+      objectReference: {fileID: 3608629600979873495}
+    - target: {fileID: 6350378065933698121, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: Value
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7026118572266993725, guid: 699233390d08b3f47927e549db167d21, type: 3}
       propertyPath: m_Sprite
@@ -385,9 +463,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 699233390d08b3f47927e549db167d21, type: 3}
+--- !u!1 &3608629600979873495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1688698303592565666, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 2700782811017504117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6850487009829032972 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8821084971258376569, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 2700782811017504117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7618764998545106182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530510288544596083, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 2700782811017504117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7874771183523953895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5202736203593456018, guid: 699233390d08b3f47927e549db167d21, type: 3}
   m_PrefabInstance: {fileID: 2700782811017504117}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4633694871501501406
@@ -401,6 +494,22 @@ PrefabInstance:
     - target: {fileID: 1297445323258984497, guid: 699233390d08b3f47927e549db167d21, type: 3}
       propertyPath: m_Name
       value: Baddie_Ladybug 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[0]
+      value: 
+      objectReference: {fileID: 611897927881058892}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[1]
+      value: 
+      objectReference: {fileID: 904767371023840173}
+    - target: {fileID: 2860680984522957630, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: baby.Array.data[2]
+      value: 
+      objectReference: {fileID: 6278377178645526652}
+    - target: {fileID: 6350378065933698121, guid: 699233390d08b3f47927e549db167d21, type: 3}
+      propertyPath: Value
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8821084971258376569, guid: 699233390d08b3f47927e549db167d21, type: 3}
       propertyPath: m_Pivot.x
@@ -487,8 +596,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 699233390d08b3f47927e549db167d21, type: 3}
+--- !u!1 &611897927881058892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5202736203593456018, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 4633694871501501406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &904767371023840173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530510288544596083, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 4633694871501501406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4189749414681707175 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8821084971258376569, guid: 699233390d08b3f47927e549db167d21, type: 3}
+  m_PrefabInstance: {fileID: 4633694871501501406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6278377178645526652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1688698303592565666, guid: 699233390d08b3f47927e549db167d21, type: 3}
   m_PrefabInstance: {fileID: 4633694871501501406}
   m_PrefabAsset: {fileID: 0}
