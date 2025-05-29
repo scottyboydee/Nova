@@ -3,7 +3,6 @@ NOVA tasks
 Pre Nova Part Tasks:
 
 -HIGH
-* Add my own text to the intro sequence
 * 1HR Full game loop
 * 1HR "Game complete" screen with a little info
 * 0.5HR Accumulate score
@@ -15,13 +14,14 @@ Pre Nova Part Tasks:
   - import and play
 - 0HR Fix the Z ordering on the titlebar
 - 0.5HR Test with Playstation / Xbox / similar Bluetooth controllers
+- 0.5HR Add my own text to the intro sequence
 
 -MED
-* Attract mode? Less important
 * Test the alternative collision mode
 * Next level too soon bug (identify the levels and a good fix for all)
 
 -LOW
+* Attract mode? Less important
 * Music? Maybe not as important, especially as it will be sat on display
 
 Levels:

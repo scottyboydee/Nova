@@ -3,30 +3,38 @@ using UnityEngine.SceneManagement;
 
 public class LifeCycleManager : MonoBehaviour
 {
+    // NOTE: TIGHT COUPLING! These Enum names MUST be the same as the Scene names in the project!
     public enum State
     {
         None,
         Loading,
         Splash,
         MainGame,
-        Highscores
+        GameComplete,
+        Highscores,
+        Max
     }
     public static LifeCycleManager Instance { get; private set; }
+
+    private string SceneName(State state) => state.ToString();
 
     private State state;
 
     private Controls controls;
     public Controls Controls {  get { return controls; } }
 
-    private string splashScene = "Splash";
-    private string mainGameScene = "MainGame";
-    private string highscoresScene = "Highscores";
+    // ancillary scenes
+    private State[] AncillaryScenes =
+    {
+        State.Splash,
+        State.Highscores,
+        State.GameComplete
+    };
+
+    private bool[] sceneLoaded = new bool[(int)State.Max];
 
     [SerializeField]
     private FadeController fadeController;
-
-    private bool splashLoaded = false;
-    private bool highscoresLoaded = false;
 
     private State nextState;
 
@@ -80,6 +88,9 @@ public class LifeCycleManager : MonoBehaviour
             case State.Highscores:
                 StateHighscores();
                 break;
+            case State.GameComplete:
+                StateGameComplete();
+                break;
             case State.None:
             default:
                 break;
@@ -92,22 +103,39 @@ public class LifeCycleManager : MonoBehaviour
     private void StateLoading()
     {
         Debug.Log("StateLoading");
-        SceneManager.LoadScene(splashScene, LoadSceneMode.Additive);
-        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
+        LoadAllAncillaryScenes();
+    }
+
+    private void LoadAllAncillaryScenes()
+    {
+        for (int i = 0; i < AncillaryScenes.Length; i++)
+        {
+            SceneManager.LoadScene(SceneName(AncillaryScenes[i]), LoadSceneMode.Additive);
+        }
     }
 
     private void StateSplash()
     {
         Debug.Log("StateSplash");
-        SceneUtils.SetSceneHierarchyActive(highscoresScene, false);
-        SceneUtils.SetSceneHierarchyActive(splashScene, true);
+        SceneUtils.SetSceneHierarchyActive(SceneName(State.Highscores), false);
+        SceneUtils.SetSceneHierarchyActive(SceneName(State.Splash), true);
+        fadeController.FadeToClear();
+    }
+
+    private void StateGameComplete()
+    {
+        Debug.Log("StateGameComplete");
+
+        SceneManager.UnloadSceneAsync(SceneName(State.MainGame));
+        SceneUtils.SetSceneHierarchyActive(SceneName(State.GameComplete), true);
+
         fadeController.FadeToClear();
     }
 
     private void StateMainGame()
     {
         Debug.Log("StateMainGame");
-        SceneUtils.SetSceneHierarchyActive(splashScene, false);
+        SceneUtils.SetSceneHierarchyActive(SceneName(State.Splash), false);
         LoadGame();
     }
 
@@ -115,10 +143,8 @@ public class LifeCycleManager : MonoBehaviour
     {
         Debug.Log("LifeCycleManager: StateHighscores");
 
-        // Unload MainGame scene and load Highscores
-        SceneManager.UnloadSceneAsync(mainGameScene);
-        //        SceneManager.LoadScene(highscoresScene, LoadSceneMode.Additive);
-        SceneUtils.SetSceneHierarchyActive(highscoresScene, true);
+        SceneManager.UnloadSceneAsync(SceneName(State.MainGame));
+        SceneUtils.SetSceneHierarchyActive(SceneName(State.Highscores), true);
 
         fadeController.FadeToClear();
     }
@@ -126,8 +152,7 @@ public class LifeCycleManager : MonoBehaviour
     public void LoadGame()
     {
         Debug.Log("LifeCycleManager: LoadGame");
-        // Load the game scene and optionally disable the splash screen
-        SceneManager.LoadScene(mainGameScene, LoadSceneMode.Additive);
+        SceneManager.LoadScene(SceneName(State.MainGame), LoadSceneMode.Additive);
     }
 
     private void CheckFire()
@@ -145,6 +170,9 @@ public class LifeCycleManager : MonoBehaviour
             case State.Highscores:
                 SetStateAfterFadeToBlack(State.Splash);
                 break;
+            case State.GameComplete:
+                SetStateAfterFadeToBlack(State.Highscores);
+                break;
             default:
  //               Debug.Log("LifeCycleManager: Nothing to do with this input!");
                 break;
@@ -157,41 +185,45 @@ public class LifeCycleManager : MonoBehaviour
 
     }
 
+    private void CheckMainScenesAllLoaded()
+    {
+        for (int i = 0; i < AncillaryScenes.Length; i++)
+        {
+            string checkScene = SceneName(AncillaryScenes[i]);
+            if (SceneManager.GetSceneByName(checkScene).isLoaded == false)
+            {
+                Debug.Log("CheckMainScenesAllLoaded: Haven't yet loaded: " + checkScene);
+                return;
+            }
+        }
+
+        Debug.Log("All ancillary scenes loaded, moving to splash.");
+        SetState(State.Splash);
+    }
+
     // called third
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("LifeCycleManager: OnSceneLoaded: " + scene.name + " mode: " + mode);
 
-        if( scene.name == splashScene )
+        if( scene.name == SceneName(State.Splash) )
         {
-            splashLoaded = true;
-            if(highscoresLoaded)
-            {
-                Debug.Log("Got highscores, then splash loaded, moving on to splash state");
-                SetState(State.Splash);
-            }
-            else
-            {
-                Debug.Log("Got splash loaded, waiting on highscores");
-            }
+            CheckMainScenesAllLoaded();
         }
-        else if( scene.name == mainGameScene ) 
+        else if (scene.name == SceneName(State.Highscores))
         {
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(mainGameScene));
+            SceneUtils.SetSceneHierarchyActive(SceneName(State.Highscores), false);
+            CheckMainScenesAllLoaded();
+        }
+        else if (scene.name == SceneName(State.GameComplete))
+        {
+            SceneUtils.SetSceneHierarchyActive(SceneName(State.GameComplete), false);
+            CheckMainScenesAllLoaded();
+        }
+        else if( scene.name == SceneName(State.MainGame) ) 
+        {
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(SceneName(State.MainGame)));
             fadeController.FadeToClear();
-        }
-        else if( scene.name == highscoresScene ) 
-        {
-            SceneUtils.SetSceneHierarchyActive(highscoresScene, false);
-            highscoresLoaded = true;
-            if (splashLoaded)
-            {
-                SetState(State.Splash);
-            }
-            else
-            {
-                Debug.Log("Got highscores loaded, waiting on splash");
-            }
         }
         else
         {
