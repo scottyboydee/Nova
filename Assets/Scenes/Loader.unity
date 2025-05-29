@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,6 +315,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 534517737}
   fadeSpeed: 1
+--- !u!1001 &566157330
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796840060413860489, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746640015460010740, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ba78be69abb7c24ab7440733e48c759, type: 3}
 --- !u!1 &680274017
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +656,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1201541430}
   - component: {fileID: 1201541431}
-  - component: {fileID: 1201541432}
   m_Layer: 0
   m_Name: LifeCycleManager
   m_TagString: Untagged
@@ -635,14 +691,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeController: {fileID: 534517739}
---- !u!81 &1201541432
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201541429}
-  m_Enabled: 1
 --- !u!1 &2038051634
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,3 +816,4 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 2038051638}
   - {fileID: 680274022}
+  - {fileID: 566157330}

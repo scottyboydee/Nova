@@ -17,7 +17,9 @@ public class SoundManager : MonoBehaviour
         if( Instance != null )
         {
             Destroy(gameObject);
-            Debug.LogError("Attempted to reinstatiate SoundManager, but it exists, so bailing.");
+            // Actually, this is helpful behaviour, so I can put them in any scene and only one will persist
+            // so I'm silencing this error as it's not harmful.
+//            Debug.LogError("Attempted to reinstatiate SoundManager, but it exists, so bailing.");
             return;
         }
 

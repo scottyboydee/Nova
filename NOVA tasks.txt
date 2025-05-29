@@ -3,20 +3,20 @@ NOVA tasks
 Pre Nova Part Tasks:
 
 -HIGH
+* Add my own text to the intro sequence
 * 1HR Full game loop
 * 1HR "Game complete" screen with a little info
 * 0.5HR Accumulate score
 * 0.5HR Display highscore
 * 2HR Functioning highscore table with joystick support for input ideally
-* 1HR SOUNDS (SFX)
-  * capture from footage
-  * import and play
 * 2HR Speeds and bullet spitting for all levels
+- 1HR SOUNDS (SFX)
+  - capture from footage
+  - import and play
 - 0HR Fix the Z ordering on the titlebar
 - 0.5HR Test with Playstation / Xbox / similar Bluetooth controllers
 
 -MED
-* Simple intro sequence
 * Attract mode? Less important
 * Test the alternative collision mode
 * Next level too soon bug (identify the levels and a good fix for all)
