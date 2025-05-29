@@ -13,6 +13,18 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
 
     private int numLives;
 
+    [SerializeField]
+    private ScoreValue Value;
+
+    public enum ScoreValue
+    {
+        Small,
+        Medium,
+        Large,
+        Boss
+    }
+
+
     void Awake()
     {
         if (notifyWhenDead != null)
@@ -23,6 +35,7 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
                 Debug.LogError($"{notifyWhenDead.name} does not implement IDeathAction!");
             }
         }
+
     }
 
     public void Explode()
@@ -35,6 +48,8 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
         //        Debug.Log("Baddie Die: " + gameObject.name);
         notifyTarget?.Died();
         
+        ScoreManager.Instance.AddScoreByValue(Value);
+
         removeFromWave();
     }
 

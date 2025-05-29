@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using TMPro;
 using UnityEngine;
 
@@ -9,18 +10,46 @@ public class ScoreManager : MonoBehaviour
     private const string STRING_HISCORE = "HI-SCORE : ";
 
     [SerializeField]
+    private int[] ScoreByValue;
+
+    private int[] ScoreByValueDefaults =
+    {
+        1,
+        10,
+        100,
+        1000
+    };
+
+    [SerializeField]
     private TMP_Text textScore;
 
     [SerializeField]
     private TMP_Text textHiscore;
 
     private int score;
-    private int hiscore;
+    private int highScore;
+
+    private static int recentHighscore;
+    public static int RecentHighscore => recentHighscore;
+
+    public static ScoreManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        Instance = this;
+
+
+        if (ScoreByValue == null || ScoreByValue.Length == 0)
+        {
+            Debug.LogError("No scores for values found - using defaults, but please fix");
+            ScoreByValue = ScoreByValueDefaults;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Reset();
     }
 
     // Update is called once per frame
@@ -32,7 +61,7 @@ public class ScoreManager : MonoBehaviour
     public void Reset()
     {
         setScore(0);
-        setHiscore(0);
+        setHighscore(0);
     }
 
     private void UpdateScoreGUI()
@@ -49,17 +78,38 @@ public class ScoreManager : MonoBehaviour
     {
         score = newScore;
         UpdateScoreGUI();
+
+        UpdateHighScore();
     }
 
-    private void setHiscore(int newHiscore)
+    private void UpdateHighScore()
     {
-        hiscore = newHiscore;
+        if (highScore > score)
+            return;
+
+        setHighscore(score);
+    }
+
+    private void setHighscore(int newHiscore)
+    {
+        highScore = newHiscore;
         UpdateHiscoreGUI();
     }
 
+    public void AddScoreByValue(Baddie.ScoreValue scoreValue)
+    {
+        int addToScore = ScoreByValue[(int)scoreValue];
+        setScore(score + addToScore);
+    }
 
     public int getPlayerScore()
     {
         return score;
+    }
+
+    public void ClearRecentHighscore()
+    {
+        Debug.Log("Clearing recent highscore of: " + recentHighscore);
+        recentHighscore = 0;
     }
 }

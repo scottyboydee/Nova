@@ -77,6 +77,15 @@ public class GameManager : MonoBehaviour
         playerDeadPauseRemaining = pauseAfterPlayerDeath;
     }
 
+    public void GameComplete()
+    {
+        Debug.Log("GAME COMPLETE!");
+        if (LifeCycleManager.Instance != null)
+        {
+            LifeCycleManager.Instance.SetStateAfterFadeToBlack(LifeCycleManager.State.GameComplete);
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start()

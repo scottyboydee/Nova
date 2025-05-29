@@ -3,10 +3,6 @@ NOVA tasks
 Pre Nova Part Tasks:
 
 -HIGH
-* 1HR Full game loop
-* 1HR "Game complete" screen with a little info
-* 0.5HR Accumulate score
-* 0.5HR Display highscore
 * 2HR Functioning highscore table with joystick support for input ideally
 * 2HR Speeds and bullet spitting for all levels
 - 1HR SOUNDS (SFX)
@@ -15,6 +11,12 @@ Pre Nova Part Tasks:
 - 0HR Fix the Z ordering on the titlebar
 - 0.5HR Test with Playstation / Xbox / similar Bluetooth controllers
 - 0.5HR Add my own text to the intro sequence
+- 1HR Full game loop
+  - Verify Die and go to highscores working
+  - Add move to gamecomplete screen, then this must move to highscores
+- 1HR "Game complete" screen with a little info
+- 0.5HR Accumulate score
+- 0.5HR Display highscore
 
 -MED
 * Test the alternative collision mode

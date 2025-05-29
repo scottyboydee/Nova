@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private SO_SFXList sfxList;
 
-    public static SoundManager Instance;
+    public static SoundManager Instance { get; private set; }
 
     private void Awake()
     {

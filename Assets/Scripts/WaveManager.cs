@@ -150,6 +150,7 @@ public class WaveManager : MonoBehaviour
 
         if( nextWaveNum >= waveBuilder.Length )
         {
+            GameManager.Instance.GameComplete();
             Debug.Log("ALL WAVES COMPLETED! GAME OVER! BUT IN THE GOOD WAY!");
             return;
         }

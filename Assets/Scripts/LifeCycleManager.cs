@@ -126,7 +126,7 @@ public class LifeCycleManager : MonoBehaviour
     {
         Debug.Log("StateGameComplete");
 
-        SceneManager.UnloadSceneAsync(SceneName(State.MainGame));
+        UnloadMainGame();
         SceneUtils.SetSceneHierarchyActive(SceneName(State.GameComplete), true);
 
         fadeController.FadeToClear();
@@ -143,10 +143,20 @@ public class LifeCycleManager : MonoBehaviour
     {
         Debug.Log("LifeCycleManager: StateHighscores");
 
-        SceneManager.UnloadSceneAsync(SceneName(State.MainGame));
+        UnloadMainGame();
+        SceneUtils.SetSceneHierarchyActive(SceneName(State.GameComplete), false);
         SceneUtils.SetSceneHierarchyActive(SceneName(State.Highscores), true);
 
         fadeController.FadeToClear();
+    }
+
+    private void UnloadMainGame()
+    {
+        Debug.Log("Unloading main game");
+        if (SceneManager.GetSceneByName(SceneName(State.MainGame)).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(SceneName(State.MainGame));
+        }
     }
 
     public void LoadGame()
