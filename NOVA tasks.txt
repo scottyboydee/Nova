@@ -1,6 +1,28 @@
 NOVA tasks
 
+Pre Nova Part Tasks:
 
+-HIGH
+* 1HR Full game loop
+* 1HR "Game complete" screen with a little info
+* 0.5HR Accumulate score
+* 0.5HR Display highscore
+* 2HR Functioning highscore table with joystick support for input ideally
+* 1HR SOUNDS (SFX)
+  * capture from footage
+  * import and play
+* 2HR Speeds and bullet spitting for all levels
+- 0HR Fix the Z ordering on the titlebar
+- 0.5HR Test with Playstation / Xbox / similar Bluetooth controllers
+
+-MED
+* Simple intro sequence
+* Attract mode? Less important
+* Test the alternative collision mode
+* Next level too soon bug (identify the levels and a good fix for all)
+
+-LOW
+* Music? Maybe not as important, especially as it will be sat on display
 
 Levels:
 
@@ -14,14 +36,17 @@ Levels:
 -07: Zag right
 -08: semicircle bottom from right top from left
 -09: bags of bouncers
-
-*10: infinity, 2 lives, comes from top right, then loops
-*11: serpentine, starting bottom left and right, winding inwards
+-10: infinity, 2 lives, comes from top right, then loops
+-11: serpentine, starting bottom left and right, winding inwards
 
 *12: buglike spitters of smaller baddies that obey mini sine paths. one at the top, one below, bouncing left/right. they seem to spit a max number of them until the screen is quite full
+
 *13: two groups come in from the left at the same time, different heights, move into circle patterns, with one inside the other
+
 *14: bouncers: LOTS of them, and they take more hits
+
 *15: a ship scrolls right to left, dropping minibouncers behind it, two layers worth
+
 *16: a tight semi-sine pattern top and bottom, that traps the player and doesn't repeat perfectly
 
 AND THAT'S IT?!?!?! (evidently, I must have remembered it wrongly from my childhood!)
