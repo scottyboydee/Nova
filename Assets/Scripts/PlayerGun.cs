@@ -81,5 +81,7 @@ public class PlayerGun : MonoBehaviour
         }
 
         shot.transform.position = playerPos;
+
+        SoundManager.Instance?.PlaySFX_PlayerShot();
     }
 }

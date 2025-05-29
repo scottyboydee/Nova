@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     public bool Invulnerability => invulnerability;
 
     [SerializeField]
+    private bool muteSFX = false;
+    public bool MuteSFX => muteSFX;
+
+    [SerializeField]
     private float scaleTime = 0.5f;
 
     [SerializeField]

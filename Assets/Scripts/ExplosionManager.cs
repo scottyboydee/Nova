@@ -26,6 +26,8 @@ public class ExplosionManager : MonoBehaviour
         Explosion newExplosion = explosionPool.Get();
         newExplosion.SetManager(this);
         newExplosion.transform.position = anchor.transform.position;
+
+        SoundManager.Instance?.PlaySFX_Explosion();
     }
 
     public void ExplosionFinished(Explosion explosion)

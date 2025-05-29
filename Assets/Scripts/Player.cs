@@ -88,6 +88,8 @@ public class Player : MonoBehaviour, ICollide
         // Let's UPGRADE that boom to a BIG baddaboom using an explosionGROUP!
         expGroup.Explode(transform.position);
 
+        SoundManager.Instance?.PlaySFX_Explosion();
+
         controls.Reset();
     }
 }
