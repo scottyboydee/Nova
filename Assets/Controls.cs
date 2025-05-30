@@ -71,6 +71,42 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Backspace"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd71638a-7d5c-4735-835c-39f47f5f52ae"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextChar"",
+                    ""type"": ""Button"",
+                    ""id"": ""dc821119-8865-4d81-ba5f-95e062318d11"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LetterNext"",
+                    ""type"": ""Button"",
+                    ""id"": ""021330f1-6f45-45f6-a5fe-98d60c077797"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LetterPrevious"",
+                    ""type"": ""Button"",
+                    ""id"": ""dcb2163e-fc05-4a53-b0e8-70d6ccec5ca7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -249,6 +285,83 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""PauseMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""82f76569-893b-41b0-9dbf-1c71a979a567"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Backspace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5425c281-ba3a-40ba-a3ce-c315492f91a9"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextChar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""99f52361-6e21-415d-82ba-a3814c551cdc"",
+                    ""path"": ""*/{PrimaryAction}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextChar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""484ec7df-b5bb-4e66-b975-26fe3fb9976f"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LetterNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b36eae2f-a557-46df-ad88-d656a9daf14c"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LetterNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9e40de49-09c5-4730-9398-164b6b86c27a"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LetterPrevious"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8df27939-0aec-4a45-a050-b2fe65ebb589"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LetterPrevious"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -262,6 +375,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Gameplay_MoveRight = m_Gameplay.FindAction("MoveRight", throwIfNotFound: true);
         m_Gameplay_Exit = m_Gameplay.FindAction("Exit", throwIfNotFound: true);
         m_Gameplay_PauseMenu = m_Gameplay.FindAction("PauseMenu", throwIfNotFound: true);
+        m_Gameplay_Backspace = m_Gameplay.FindAction("Backspace", throwIfNotFound: true);
+        m_Gameplay_NextChar = m_Gameplay.FindAction("NextChar", throwIfNotFound: true);
+        m_Gameplay_LetterNext = m_Gameplay.FindAction("LetterNext", throwIfNotFound: true);
+        m_Gameplay_LetterPrevious = m_Gameplay.FindAction("LetterPrevious", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -328,6 +445,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_MoveRight;
     private readonly InputAction m_Gameplay_Exit;
     private readonly InputAction m_Gameplay_PauseMenu;
+    private readonly InputAction m_Gameplay_Backspace;
+    private readonly InputAction m_Gameplay_NextChar;
+    private readonly InputAction m_Gameplay_LetterNext;
+    private readonly InputAction m_Gameplay_LetterPrevious;
     public struct GameplayActions
     {
         private @Controls m_Wrapper;
@@ -337,6 +458,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @MoveRight => m_Wrapper.m_Gameplay_MoveRight;
         public InputAction @Exit => m_Wrapper.m_Gameplay_Exit;
         public InputAction @PauseMenu => m_Wrapper.m_Gameplay_PauseMenu;
+        public InputAction @Backspace => m_Wrapper.m_Gameplay_Backspace;
+        public InputAction @NextChar => m_Wrapper.m_Gameplay_NextChar;
+        public InputAction @LetterNext => m_Wrapper.m_Gameplay_LetterNext;
+        public InputAction @LetterPrevious => m_Wrapper.m_Gameplay_LetterPrevious;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -361,6 +486,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @PauseMenu.started += instance.OnPauseMenu;
             @PauseMenu.performed += instance.OnPauseMenu;
             @PauseMenu.canceled += instance.OnPauseMenu;
+            @Backspace.started += instance.OnBackspace;
+            @Backspace.performed += instance.OnBackspace;
+            @Backspace.canceled += instance.OnBackspace;
+            @NextChar.started += instance.OnNextChar;
+            @NextChar.performed += instance.OnNextChar;
+            @NextChar.canceled += instance.OnNextChar;
+            @LetterNext.started += instance.OnLetterNext;
+            @LetterNext.performed += instance.OnLetterNext;
+            @LetterNext.canceled += instance.OnLetterNext;
+            @LetterPrevious.started += instance.OnLetterPrevious;
+            @LetterPrevious.performed += instance.OnLetterPrevious;
+            @LetterPrevious.canceled += instance.OnLetterPrevious;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -380,6 +517,18 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @PauseMenu.started -= instance.OnPauseMenu;
             @PauseMenu.performed -= instance.OnPauseMenu;
             @PauseMenu.canceled -= instance.OnPauseMenu;
+            @Backspace.started -= instance.OnBackspace;
+            @Backspace.performed -= instance.OnBackspace;
+            @Backspace.canceled -= instance.OnBackspace;
+            @NextChar.started -= instance.OnNextChar;
+            @NextChar.performed -= instance.OnNextChar;
+            @NextChar.canceled -= instance.OnNextChar;
+            @LetterNext.started -= instance.OnLetterNext;
+            @LetterNext.performed -= instance.OnLetterNext;
+            @LetterNext.canceled -= instance.OnLetterNext;
+            @LetterPrevious.started -= instance.OnLetterPrevious;
+            @LetterPrevious.performed -= instance.OnLetterPrevious;
+            @LetterPrevious.canceled -= instance.OnLetterPrevious;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -404,5 +553,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnMoveRight(InputAction.CallbackContext context);
         void OnExit(InputAction.CallbackContext context);
         void OnPauseMenu(InputAction.CallbackContext context);
+        void OnBackspace(InputAction.CallbackContext context);
+        void OnNextChar(InputAction.CallbackContext context);
+        void OnLetterNext(InputAction.CallbackContext context);
+        void OnLetterPrevious(InputAction.CallbackContext context);
     }
 }

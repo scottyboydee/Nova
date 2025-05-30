@@ -38,7 +38,6 @@ public class ScoreManager : MonoBehaviour
     {
         Instance = this;
 
-
         if (ScoreByValue == null || ScoreByValue.Length == 0)
         {
             Debug.LogError("No scores for values found - using defaults, but please fix");
@@ -61,7 +60,10 @@ public class ScoreManager : MonoBehaviour
     public void Reset()
     {
         setScore(0);
-        setHighscore(0);
+
+        int highscore = HighScoreManager.Instance.GetTopHighScore();
+
+        setHighscore(highscore);
     }
 
     private void UpdateScoreGUI()
@@ -69,14 +71,16 @@ public class ScoreManager : MonoBehaviour
         textScore.text = STRING_SCORE + score;
     }
 
-    private void UpdateHiscoreGUI()
+    private void UpdateHighScoreGUI()
     {
-        textHiscore.text = STRING_HISCORE + score;
+        textHiscore.text = STRING_HISCORE + highScore;
     }
 
     private void setScore(int newScore)
     {
         score = newScore;
+        recentHighscore = score;
+
         UpdateScoreGUI();
 
         UpdateHighScore();
@@ -93,7 +97,7 @@ public class ScoreManager : MonoBehaviour
     private void setHighscore(int newHiscore)
     {
         highScore = newHiscore;
-        UpdateHiscoreGUI();
+        UpdateHighScoreGUI();
     }
 
     public void AddScoreByValue(Baddie.ScoreValue scoreValue)

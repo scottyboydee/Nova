@@ -177,9 +177,6 @@ public class LifeCycleManager : MonoBehaviour
             case State.Splash:
                 SetStateAfterFadeToBlack(State.MainGame);
                 break;
-            case State.Highscores:
-                SetStateAfterFadeToBlack(State.Splash);
-                break;
             case State.GameComplete:
                 SetStateAfterFadeToBlack(State.Highscores);
                 break;
