@@ -6,35 +6,15 @@ using System.Linq;
 
 public class HighScoreManager : MonoBehaviour
 {
-    [System.Serializable]
-    public struct Entry
-    {
-        public int score;
-        public string name;
-    }
-
     private Controls controls;
 
     [Header("UI")]
     public TextMeshProUGUI highScoreNames;
     public TextMeshProUGUI highScoreScores;
     public GameObject pressFireText;
-
-    [Header("Settings")]
-    [SerializeField]
-    private int maxEntries = 10;
-    [SerializeField]
-    private int maxNameLength = 15;
     [SerializeField]
     private float BlinkSpeed = 0.3f;
 
-    [Header("Persistence")]
-    public string[] defaultNameTable;
-    public string defaultNameFallback = "AAA"; // Used if no name is saved
-    public int DefaultHighScore = 1000;
-    public bool forceResetScores = false;
-
-    private List<Entry> scores = new();
 
     private int editingIndex = -1;
     private string editingName = "";
@@ -43,6 +23,8 @@ public class HighScoreManager : MonoBehaviour
     private float blinkTimer = 0f;
     private bool showCursor = true;
     public static HighScoreManager Instance { get; private set; }
+
+    private HighScoreData data;
 
     private static readonly char[] CHARSET =
     {
@@ -59,31 +41,12 @@ public class HighScoreManager : MonoBehaviour
 
     }
 
-    public int GetTopHighScore()
-    {
-        if( scores == null || scores.Count == 0 )
-        {
-            Debug.LogError("EEEK. Highscores not loaded, but GetTopHighScore called.");
-            return 0;
-        }
-
-        return scores[0].score;
-    }
-
     private void Awake()
     {
         Instance = this;
 
-        if (forceResetScores || !PlayerPrefs.HasKey("HS_0_Score"))
-        {
-            ResetHighscores();
-        }
-        else
-        {
-            LoadHighscores();
-        }
+        data = HighScoreData.Instance;
 
-        forceResetScores = false;
     }
 
     private void OnEnable()
@@ -92,9 +55,9 @@ public class HighScoreManager : MonoBehaviour
         UpdateNamesDisplay();
         UpdateScoreDisplay();
 
-        if (ScoreManager.RecentHighscore > scores[scores.Count-1].score)
+        if (ScoreManager.RecentHighscore > data.GetLowestScore())
         {
-            Debug.Log("New Highscore to submit! " + ScoreManager.RecentHighscore + " > " + scores[0].score);
+            Debug.Log("New Highscore to submit! " + ScoreManager.RecentHighscore + " > " + data.GetLowestScore());
             pressFireText.SetActive(false);
             AddScore(ScoreManager.RecentHighscore);
         }
@@ -107,55 +70,9 @@ public class HighScoreManager : MonoBehaviour
 
     }
 
-    void SaveHighscores()
-    {
-        for (int i = 0; i < scores.Count; i++)
-        {
-            PlayerPrefs.SetInt($"HS_{i}_Score", scores[i].score);
-            PlayerPrefs.SetString($"HS_{i}_Name", scores[i].name);
-        }
-        PlayerPrefs.Save();
-    }
-
-    void LoadHighscores()
-    {
-        scores.Clear();
-        for (int i = 0; i < maxEntries; i++)
-        {
-            int score = PlayerPrefs.GetInt($"HS_{i}_Score", DefaultHighScore);
-            string name = PlayerPrefs.GetString($"HS_{i}_Name", defaultNameFallback);
-            scores.Add(new Entry { score = score, name = name });
-        }
-    }
-
-    void ResetHighscores()
-    {
-        scores.Clear();
-
-        for (int i = 0; i < maxEntries; i++)
-        {
-            string name = (i < defaultNameTable.Length && defaultNameTable[i] != null)
-                ? defaultNameTable[i].ToUpperInvariant()
-                : defaultNameFallback;
-
-            // let's assume the wise editors of the project will not mess up the init data for this table
-            //name = name.Length > maxNameLength ? name.Substring(0, maxNameLength) : name;
-
-            scores.Add(new Entry { score = DefaultHighScore, name = name });
-        }
-
-        SaveHighscores();
-    }
-
-
-
     public void AddScore(int score)
     {
-        Entry newEntry = new Entry { score = score, name = "" };
-        scores.Add(newEntry);
-        scores = scores.OrderByDescending(e => e.score).Take(maxEntries).ToList();
-
-        editingIndex = scores.IndexOf(newEntry);
+        editingIndex = data.AddScore(score);
         editingName = "";
         cursorPosition = 0;
         charIndex = 0;
@@ -169,9 +86,9 @@ public class HighScoreManager : MonoBehaviour
     private void UpdateScoreDisplay()
     {
         highScoreScores.text = "";
-        for (int i = 0; i < scores.Count; i++)
+        for (int i = 0; i < data.Scores.Count; i++)
         {
-            highScoreScores.text += $"{scores[i].score}\n";
+            highScoreScores.text += $"{data.Scores[i].score}\n";
         }
     }
 
@@ -214,11 +131,11 @@ public class HighScoreManager : MonoBehaviour
                 SubmitName();
                 return;
             }
-            else if (CHARSET.Contains(char.ToUpper(c)) && editingName.Length < maxNameLength)
+            else if (CHARSET.Contains(char.ToUpper(c)) && editingName.Length < data.MaxNameLength)
             {
                 editingName += char.ToUpper(c);
                 cursorPosition++;
-                if (cursorPosition >= maxNameLength)
+                if (cursorPosition >= data.MaxNameLength)
                 {
                     SubmitName();
                     return;
@@ -238,14 +155,14 @@ public class HighScoreManager : MonoBehaviour
         }
         else if (controls.Gameplay.NextChar.WasPressedThisFrame())
         {
-            if (editingName.Length < maxNameLength)
+            if (editingName.Length < data.MaxNameLength)
             {
                 editingName += CHARSET[charIndex];
                 cursorPosition++;
                 charIndex = 0;
             }
 
-            if (editingName.Length >= maxNameLength)
+            if (editingName.Length >= data.MaxNameLength)
             {
                 SubmitName();
                 return;
@@ -275,9 +192,9 @@ public class HighScoreManager : MonoBehaviour
 
     void SubmitName()
     {
-        scores[editingIndex] = new Entry { score = scores[editingIndex].score, name = editingName };
+        data.SubmitName(editingIndex, editingName);
         editingIndex = -1;
-        SaveHighscores();
+        data.SaveHighscores();
         UpdateNamesDisplay();
         pressFireText.SetActive(true);
     }
@@ -285,22 +202,22 @@ public class HighScoreManager : MonoBehaviour
     void UpdateNamesDisplay()
     {
         highScoreNames.text = "";
-        for (int i = 0; i < scores.Count; i++)
+        for (int i = 0; i < data.Scores.Count; i++)
         {
-            string name = scores[i].name;
+            string name = data.Scores[i].name;
             if (i == editingIndex)
             {
                 string visible = editingName;
-                if (visible.Length < maxNameLength)
+                if (visible.Length < data.MaxNameLength)
                 {
                     char preview = showCursor ? CHARSET[charIndex] : '_';
                     visible += preview;
                 }
-                name = visible.PadRight(maxNameLength);
+                name = visible.PadRight(data.MaxNameLength);
             }
             else
             {
-                name = name.PadRight(maxNameLength);
+                name = name.PadRight(data.MaxNameLength);
             }
 
 //            highscoreText.text += $"{i + 1}. {name} {scores[i].score}\n";

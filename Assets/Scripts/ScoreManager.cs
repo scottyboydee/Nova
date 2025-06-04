@@ -61,7 +61,7 @@ public class ScoreManager : MonoBehaviour
     {
         setScore(0);
 
-        int highscore = HighScoreManager.Instance.GetTopHighScore();
+        int highscore = HighScoreData.Instance.GetTopHighScore();
 
         setHighscore(highscore);
     }

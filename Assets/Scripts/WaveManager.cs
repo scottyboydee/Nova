@@ -31,6 +31,7 @@ public class WaveManager : MonoBehaviour
     private Wave[] waveBuilder;
 
     private List<Baddie> baddies;
+    public List<Baddie> Baddies => baddies;
 
     private int nextWaveNum = 0;
 
