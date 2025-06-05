@@ -72,7 +72,7 @@ public class BaddieShipSpitter : MonoBehaviour
 
         int numActiveChildren = CountNonSpitters();
 
-        Debug.Log("My turn: " + gameObject.name);
+//        Debug.Log("My turn: " + gameObject.name);
 
         if(numActiveChildren >= NUM_CHILDREN)
         {
@@ -80,7 +80,7 @@ public class BaddieShipSpitter : MonoBehaviour
             return;
         }
 
-        Debug.Log("Only have " + numActiveChildren + " need to spit out a new one!");
+//        Debug.Log("Only have " + numActiveChildren + " need to spit out a new one!");
 
         SpitOutNewChild();
     }
@@ -92,14 +92,14 @@ public class BaddieShipSpitter : MonoBehaviour
         GameObject newChild = Instantiate(childToSpit);
         newChild.transform.SetParent(transform.parent, false);
         newChild.transform.localPosition = transform.localPosition - new Vector3 (0f, SpitOffset, 0f);
-        Debug.Log("SpitterParent position: " + transform.localPosition + " child position: " + newChild.transform.localPosition);
+//        Debug.Log("SpitterParent position: " + transform.localPosition + " child position: " + newChild.transform.localPosition);
         newChild.name = "SpitterBaby" + spatSoFar;
 
         newChild.SetActive(true);
 
         spatSoFar++;
 
-        Debug.Log("Spat out another baby: " + newChild.name);
+//        Debug.Log("Spat out another baby: " + newChild.name);
 
     }
 
