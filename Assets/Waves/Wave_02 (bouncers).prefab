@@ -124,11 +124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 425
+      value: 579.5
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -8.3
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -141,6 +141,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: MaxLives
@@ -199,8 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 110
-  yAccel: 0.5
+  speed: 150
+  yAccel: 0.3
   direction: 0
   animSprite: {fileID: 1934531923334398830}
 --- !u!1001 &2197980576830130336
@@ -273,11 +277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 550
+      value: 779.1
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15
+      value: 79.5
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -290,6 +294,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: MaxLives
@@ -348,8 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 110
-  yAccel: 0.5
+  speed: 160
+  yAccel: 0.3
   direction: 0
   animSprite: {fileID: 2201870820191322010}
 --- !u!1001 &4105445456270465363
@@ -422,7 +430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -715
+      value: -924.21
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -439,6 +447,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: MaxLives
@@ -497,8 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 110
-  yAccel: 0.5
+  speed: 150
+  yAccel: 0.3
   direction: 1
   animSprite: {fileID: 4104800764979326569}
 --- !u!1001 &4162614100024597711
@@ -571,7 +583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -600
+      value: -770.4
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -588,6 +600,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: MaxLives
@@ -646,8 +662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 110
-  yAccel: 0.5
+  speed: 180
+  yAccel: 0.3
   direction: 1
   animSprite: {fileID: 4164357478220934133}
 --- !u!1001 &7523750749005436904
@@ -720,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 355
+      value: 377.28
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -737,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: MaxLives
@@ -775,8 +795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 110
-  yAccel: 0.5
+  speed: 170
+  yAccel: 0.3
   direction: 0
   animSprite: {fileID: 7523242397043155154}
 --- !u!224 &7279192218599557461 stripped
@@ -865,7 +885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -445
+      value: -513.6
       objectReference: {fileID: 0}
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -882,6 +902,10 @@ PrefabInstance:
     - target: {fileID: 967528107880111805, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
+      propertyPath: Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397544320573320077, guid: 33feea4d72885a440b63e8b1efd02777, type: 3}
       propertyPath: MaxLives
@@ -924,8 +948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6123121032c9b947ae03d1f24412421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 110
-  yAccel: 0.5
+  speed: 150
+  yAccel: 0.3
   direction: 1
   animSprite: {fileID: 7811314086844222770}
 --- !u!224 &6990803913068422325 stripped
