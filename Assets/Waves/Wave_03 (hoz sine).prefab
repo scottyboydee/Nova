@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -186,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -286,6 +290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -316,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -416,6 +424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -446,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -542,6 +554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -572,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -668,6 +684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -698,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -798,6 +818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -828,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -924,6 +948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -954,7 +982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -1054,6 +1082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1084,7 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -1184,6 +1216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1214,7 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -1314,6 +1350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1339,7 +1379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -1444,6 +1484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1469,7 +1513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
@@ -1574,6 +1618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baddie_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158001846907938703, guid: 604be3dfdf317184aa1576e7cc49c041, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1599,7 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51dd68b314b82444a4a51429f1918e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
   sineOffset: -100
   sineScale: 0.015
   sineMagnitude: 170
