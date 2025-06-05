@@ -52,6 +52,8 @@ public class WaveManager : MonoBehaviour
 
         // QoL so I don't have to keep turning subhierarchies on and off all the time in editor
         waveBuilderPrefab?.SetActive(false);
+
+        baddies = new List<Baddie>();
     }
 
     void Start()
@@ -61,8 +63,6 @@ public class WaveManager : MonoBehaviour
         NextWave();
 
 //        CreateAllWaves();
-
-        baddies = new List<Baddie>();
     }
 
     public void AddBaddieToList( Baddie baddie )
@@ -129,11 +129,11 @@ public class WaveManager : MonoBehaviour
 
         baddies.Remove(baddie);
 
-        if (baddies.Count > 0)
-            return;
+//        if (baddies.Count > 0)
+//            return;
 
-        Debug.Log("WaveManager: Wave complete, moving to next.");
-        StartPauseBeforeNextWave();
+//        Debug.Log("WaveManager: Wave complete, moving to next.");
+//        StartPauseBeforeNextWave();
 
 
 //        Debug.Log("RemoveBaddieFromList: number of baddies now: " + baddies.Count);
@@ -164,7 +164,12 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (GameManager.Instance.PlayerRespawning)
+        {
+//            Debug.Log("Player died so waiting...");
+            return;
+        }
+
         if( nextWavePauseRemaining > 0 )
         {
 //            Debug.Log("Next Wave timer remain: " + nextWavePauseRemaining);
@@ -176,7 +181,15 @@ public class WaveManager : MonoBehaviour
                 nextWavePauseRemaining = 0;
                 NextWave();
             }
+
+            return;
         }
+
+        if (baddies.Count > 0)
+            return;
+
+        Debug.Log("WaveManager: Wave complete, moving to next.");
+        StartPauseBeforeNextWave();
     }
 
     public void RestartCurrentWave()

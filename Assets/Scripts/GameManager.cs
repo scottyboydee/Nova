@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     private float pauseAfterPlayerDeath;
 
     private float playerDeadPauseRemaining = 0;
+    public bool PlayerRespawning => playerDeadPauseRemaining > 0;
 
     [SerializeField]
     private Player thePlayer;

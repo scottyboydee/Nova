@@ -36,6 +36,7 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
             }
         }
 
+        WaveManager.Instance.AddBaddieToList(this);
     }
 
     public void Explode()
@@ -88,7 +89,7 @@ public class Baddie : MonoBehaviour, IExplode, ICollide
     void Start()
     {
         numLives = MaxLives;
-        WaveManager.Instance.AddBaddieToList(this);   
+//        WaveManager.Instance.AddBaddieToList(this);   
     }
 
     // Update is called once per frame
