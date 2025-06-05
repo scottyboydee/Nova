@@ -2164,8 +2164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 459164830}
   xVelMax: 500
-  xAccel: 8
-  xDecel: 0.96
+  xAccel: 40
+  xDecel: 0.8
   xVel: 0
 --- !u!114 &459164834
 MonoBehaviour:
@@ -7334,7 +7334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionManager: {fileID: 1660278501}
   bulletManager: {fileID: 1660278502}
-  StartWave: 2
+  StartWave: 0
   waveParent: {fileID: 1864642009}
   pauseBetweenWaves: 2
   waveBuilderPrefab: {fileID: 1594479158}
