@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8281356988445646354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -153,6 +153,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (12)
@@ -188,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!1001 &2676280801840555965
 PrefabInstance:
@@ -282,6 +286,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (2)
@@ -317,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!1001 &3507825612716707816
 PrefabInstance:
@@ -411,6 +419,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (6)
@@ -446,7 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!1001 &3742461366065602787
 PrefabInstance:
@@ -540,6 +552,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (8)
@@ -575,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!1001 &3855591752769603922
 PrefabInstance:
@@ -669,6 +685,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (4)
@@ -704,7 +724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!1001 &4417892873944518060
 PrefabInstance:
@@ -798,6 +818,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (1)
@@ -833,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!1001 &5557226784378033329
 PrefabInstance:
@@ -927,6 +951,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (5)
@@ -957,7 +985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!224 &6591150372966840129 stripped
 RectTransform:
@@ -1056,6 +1084,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (11)
@@ -1086,7 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!224 &4923749177205757295 stripped
 RectTransform:
@@ -1185,6 +1217,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02
@@ -1215,7 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!224 &5621852519061789985 stripped
 RectTransform:
@@ -1314,6 +1350,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (9)
@@ -1344,7 +1384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!224 &5559812959543480384 stripped
 RectTransform:
@@ -1443,6 +1483,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (7)
@@ -1473,7 +1517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!224 &8420394507060234768 stripped
 RectTransform:
@@ -1572,6 +1616,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (10)
@@ -1602,7 +1650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!224 &8842054675533618652 stripped
 RectTransform:
@@ -1701,6 +1749,10 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4792628274449058292, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
+      propertyPath: Probability
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 9082913449982241464, guid: ab38d3c8b6406714bb8c96a992faaf84, type: 3}
       propertyPath: m_Name
       value: Baddie_02 (3)
@@ -1731,7 +1783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: 0
-  speed: 100
+  speed: 180
   yMove: 48
 --- !u!224 &6997786769021698495 stripped
 RectTransform:
