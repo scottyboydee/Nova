@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System;
@@ -158,3 +159,4 @@ public class SafeMultiEditTool : EditorWindow
         }
     }
 }
+#endif

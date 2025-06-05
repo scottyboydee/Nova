@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using System;
@@ -140,3 +141,4 @@ public class AutoAssignWindow : EditorWindow
         return dict;
     }
 }
+#endif
