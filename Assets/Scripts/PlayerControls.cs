@@ -36,9 +36,12 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        Move();
-
         CheckFire();
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
     }
 
     private void CheckFire()
