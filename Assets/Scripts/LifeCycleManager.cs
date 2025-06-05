@@ -40,6 +40,8 @@ public class LifeCycleManager : MonoBehaviour
 
     private void Awake()
     {
+        Screen.SetResolution(640, 400, false);
+
         Instance = this;
     }
 
